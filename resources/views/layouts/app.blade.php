@@ -62,6 +62,9 @@
 <script src="{{ asset('web/js/scripts.js') }}"></script>
 <script src="{{ mix('assets/js/profile.js') }}"></script>
 <script src="{{ mix('assets/js/custom/custom.js') }}"></script>
+
+
+@stack('scriptsCustom')
 @yield('page_js')
 @yield('scripts')
 <script>
