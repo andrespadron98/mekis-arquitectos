@@ -264,7 +264,7 @@ ol {
 */
 
 #desktop.header .name {
-    position: fixed;
+    position: absolute;
     left: 3rem;
     right: 3rem;
     z-index: 99999;
@@ -422,20 +422,32 @@ ol {
     position: relative!important;
 }
 
-.collapse-header, .collapse-content, .collapse-nav.is-visible, .collapse-title, .no-collapse-title.is-visible {
+.collapse-header, .collapse-content, .no-collapse-nav.is-visible, .collapse-nav.is-visible, .collapse-title, .no-collapse-title.is-visible {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0);
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
-.collapse-nav, .no-collapse-title, .collapse-title.is-visible  {
-    -webkit-transform: translateY((-100%));
-    -moz-transform: translateY((-100%));
-    -ms-transform: translateY((-100%));
-    -o-transform: translateY((-100%));
+.collapse-nav, .no-collapse-nav, .no-collapse-title, .collapse-title.is-visible  {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
     transform: translateY(-100%);
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
 .collapse-header {
@@ -460,57 +472,57 @@ ol {
     transform: translateY(-56%);
 } */
 
-.collapse-nav {
+.no-collapse-nav, .collapse-nav {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    -webkit-transition-property: -webkit-transform;
+    /* -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     transition-property: transform;
     -webkit-transition-duration: 0.4s;
     -moz-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    transition-duration: 0.4s; */
 }
 
 .no-collapse-title {
     position: absolute;
     padding-top: 33rem;
     width: 100%;
-    -webkit-transition-property: -webkit-transform;
+    /* -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     transition-property: transform;
     -webkit-transition-duration: 0.4s;
     -moz-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    transition-duration: 0.4s; */
 }
 
 .collapse-title {
     position: absolute;
     top: 13rem;
-    -webkit-transition-property: -webkit-transform;
+    /* -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     transition-property: transform;
     -webkit-transition-duration: 0.4s;
     -moz-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    transition-duration: 0.4s; */
     width: 100%;
 }
 
 .collapse-content {
-    -webkit-transition-property: -webkit-transform;
+    /* -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     transition-property: transform;
     -webkit-transition-duration: 0.4s;
     -moz-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    transition-duration: 0.4s; */
 }
 
-.collapse-nav ul {
+.no-collapse-nav ul, .collapse-nav ul {
     padding-top: 12rem;
 }
 
-.collapse-nav li {
+.no-collapse-nav li, .collapse-nav li {
     font-size: 0.7rem;
     margin: .9em 0;
     text-transform: uppercase;
@@ -518,11 +530,11 @@ ol {
     font-family: "Spartan Thin";
 }
 
-.collapse-nav li i {
+.no-collapse-nav li i, .collapse-nav li i {
     font-size: 1rem;
 }
 
-.collapse-nav a {
+.no-collapse-nav a, .collapse-nav a {
     display: inline-block;
     padding: .4rem 0;
     /* -webkit-transition: background 0.2s; */

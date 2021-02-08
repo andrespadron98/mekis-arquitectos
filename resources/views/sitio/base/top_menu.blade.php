@@ -6,7 +6,7 @@
         </div>
         <div class="navbar">
             <a class="btn-collapse-nav" href="#0"><span class="menu-icon"></span></a>
-            <nav class="collapse-nav is-visible">
+            <nav class="no-collapse-nav">
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link {{ Request::is('proyectos*') ? 'active' : '' }}" href="{{ route('proyecto') }}">Proyectos <i class="bi bi-plus"></i></a></li>
                     <li class="nav-item"><a class="nav-link {{ Request::is('construcciones*') ? 'active' : '' }}" href="{{ route('construcciones') }}">Construcciones</a></li>
@@ -18,11 +18,11 @@
             </nav>
         </div>
         <div class="title">
-            <div class="no-collapse-title is-visible">
+            <div class="no-collapse-title">
                 <h2>{{ $valores['titulo'] }}</h2>
                 <div class="detail-title"><img src="{{ asset('assets/images/detail-title-x.png') }}" class="img-fluid" alt=""></div>
             </div>
-            <div class="collapse-title is-visible">
+            <div class="collapse-title">
                 <h2>{{ $valores['titulo'] }}</h2>
                 <div class="detail-title"><img src="{{ asset('assets/images/detail-title-x.png') }}" class="img-fluid" alt=""></div>
             </div>

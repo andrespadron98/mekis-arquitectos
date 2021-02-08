@@ -19,14 +19,14 @@
     <body>
         @include('sitio.base.top_menu')
         
-        <div class="collapse-header header-pages">
+        <div class="collapse-header header-pages is-visible">
             <div class="owl-header owl-carousel">
                 <div class="background-header item set-bg" data-setbg="{{ asset('assets/images/'.$valores['img']) }}"></div>
                 <div class="background-header item set-bg" data-setbg="{{ asset('assets/images/'.$valores['img']) }}"></div>
             </div>
         </div>
         
-        <main class="content-section collapse-content content-pages">
+        <main class="content-section collapse-content content-pages is-visible">
             @yield('contenido')
             @include('sitio.base.footer')
         </main>
