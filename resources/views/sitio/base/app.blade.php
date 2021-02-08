@@ -19,7 +19,13 @@
     <body>
         @include('sitio.base.top_menu')
         
-        <div id="background-header" class="collapse-header header-pages set-bg" data-setbg="{{ asset('assets/images/'.$valores['img']) }}"></div>
+        <div class="collapse-header header-pages">
+            <div class="owl-header owl-carousel">
+                <div class="background-header item set-bg" data-setbg="{{ asset('assets/images/'.$valores['img']) }}"></div>
+                <div class="background-header item set-bg" data-setbg="{{ asset('assets/images/'.$valores['img']) }}"></div>
+            </div>
+        </div>
+        
         <main class="content-section collapse-content content-pages">
             @yield('contenido')
             @include('sitio.base.footer')
@@ -32,6 +38,20 @@
         <script src="{{ asset('assets/js/magnificpopup.js') }}"></script>
         <script src="{{ asset('assets/js/main.js') }}"></script>
         <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+        <script>
+            $(document).ready(function ($) {
+                $('.owl-header').owlCarousel({
+                    loop: true,
+                    nav: false,
+                    dots: false,
+                    mouseDrag: true,
+                    animateOut: 'fadeOut',
+                    animateIn: 'fadeIn',
+                    items: 1,
+                    autoplay: true
+                });
+            });
+        </script>
         @stack('jsPersonalizado')
     </body>
 </html>

@@ -6,9 +6,9 @@
 
  'use strict';
 
- (function() {
+ (function($) {
 
-	var width, height, backgroundHeader, animateHeader = true;
+	var width, height, backgroundHeader;
 
 	initHeader();
 	addListeners();
@@ -24,30 +24,35 @@
 	/*------------------
 		Header Background Set
 	--------------------*/
-	
+
 	function initHeader() {
 		width = window.innerWidth;
-        height = window.innerHeight;
+		height = window.innerHeight;
 
-        backgroundHeader = document.getElementById('background-header');
-		backgroundHeader.style.height = height+'px';
+		$(".background-header").css("height", height+'px');
 
 		// btnCollapseNav = document.getElementsByClassName('btn-collapse-nav');
         // collapseNav.style.height = height+'px';
 	}
 
 	function addListeners() {
-        // if(!('ontouchstart' in window)) {
-        //     window.addEventListener('mousemove', mouseMove);
-        // }
         window.addEventListener('scroll', scrollCheck);
         window.addEventListener('resize', resize);
     }
 
 	function scrollCheck() {
-        if(document.body.scrollTop > height) animateHeader = false;
-        else animateHeader = true;
-    }
+
+		// if ($("#background-header").offset().top > 56) {
+		// 	$("#background-header").addClass("is-visible");
+		// } 
+		// else {
+		// 	$("#background-header").removeClass("is-visible");
+		// }
+
+		// if (document.body.scrollTop > 255 || document.documentElement.scrollTop > 255) {
+		// 	$('#btn-collapse-nav').trigger('click');
+		// }
+	}
 
     function resize() {
         width = window.innerWidth;
@@ -57,7 +62,7 @@
 
 	$('.btn-collapse-nav').on('click', function(){
 		$('.menu-icon').toggleClass('is-clicked');
-		
+
 		if( $('.collapse-nav').hasClass('is-visible') ) {
 			$('.collapse-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
 		} else {
@@ -89,10 +94,4 @@
 		}
 	});
 
-	/*------------------
-		owl-carousel
-	--------------------*/
-
-
-
-})();
+})(jQuery);

@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="pt-5 mt-4">
-            <div class="owl-carousel owl-theme gallery-proyecto">
+            <div class="owl-page owl-theme gallery-proyecto">
                 @foreach ($imagenes as $row)
                     <div class="item">
                         <a href="{{ asset('contenido/'.$row->imagen) }}">
@@ -83,7 +83,7 @@
                     tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
                 }
             });
-            $('.owl-carousel').owlCarousel({
+            $('.owl-page').owlCarousel({
                 nav:true,
                     // autoWidth:true,
                 center:false,

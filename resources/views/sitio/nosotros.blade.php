@@ -1,5 +1,39 @@
 @extends('sitio.base.app')
 @section('contenido')
+<div class="wrd-block prensa-sec py-0">
+    <div class="container container-lg">
+        <h1 class="text-left py-5">EQUIPO</h1>
+        <div class="row">
+            <div class="col-12 col-lg-4 px-3">
+                <img src="assets/images/nosotros/andres.jpeg" class="img-fluid" alt="">
+                <div class="pt-4">
+                    <h2 class="mb-0">Andrés Mekis</h2>
+                    <p><small>1988 - Arquitecto Universidad de Chile.</small></p>
+                    <p class="font-weight-light">Se radicó en Paris entre los años 1988-1992, colabora en la oficina del destacado arquitecto Emile Duhart en Paris. Fue en Francia en donde despierta el interés por la arquitectura Provenzal con un aporte personal en su propia interpretación. </p>
+                    <p class="font-weight-bold">De vuelta en Chile en 1993 forma junto a su hermano arquitecto Felipe el estudio” Mekis arquitectos” con quien comparte equipo hasta 2008. Desde entonces ha desarrollado continuamente proyectos arquitectónicos lo largo de Chile.</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 px-3">
+                <img src="assets/images/nosotros/leon.jpg" class="img-fluid" alt="">
+                <div class="pt-4">
+                    <h2 class="mb-0">León Mekis</h2>
+                    <p><small>2020 - Arquitecto UNAB.</small></p>
+                    <p class="font-weight-light">Desde temprana edad trabajó en la constructora y estudio de su padre arquitecto, en este involucramiento continuo en el desarrollo de proyectos y obras ejecutadas en Mekis arquitectos durante toda su carrera, lo que deja en él una enriquecedora experiencia en terreno. Estudió su última etapa universitaria en la Universidad Europea de Valencia, España.</p>
+                    {{-- <p class="font-weight-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, necessitatibus. Id modi molestiae quod quibusdam recusandae quasi.</p> --}}
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 px-3">
+                <img src="assets/images/nosotros/pablo.jpg" class="img-fluid" alt="">
+                <div class="pt-4">
+                    <h2 class="mb-0">Pablo Parra</h2>
+                    <p><small>2014 - Arquitecto Universidad Politécnica de Valencia, España.</small></p>
+                    <p class="font-weight-light">De Albacete, España. Durante un año trabajó como arquitecto de departamentos en Shanghái, China. Donde se destaca su fascinación por la arquitectura y paisajismo oriental.</p>
+                    <p class="font-weight-bold">Forma equipo de Mekis arquitectos desde el 2016 aportando sus conocimientos culturales y software BIM como Revit y en visualización arquitectónica para optimizar los tiempos de trabajo a la vez de facilitar la compresión de los proyectos a los clientes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="wrd-block prensa-sec pb-0">
     <div class="container container-lg">
         <div class="row">
@@ -14,65 +48,6 @@
         </div>
     </div>
 </div>
-<div class="wrd-block prensa-sec py-0">
-    <div class="container container-lg">
-        <h1 class="text-left py-5">EQUIPO</h1>
-        <div class="row">
-            <div class="col-12 col-lg-4">
-                <img src="assets/images/nosotros/img-team.png" class="img-fluid" alt="">
-            </div>
-            <div class="col-12 col-lg-8 pt-4 pt-sm-0 pl-0 pl-sm-4 text-center text-sm-left">
-                <h2 class="mb-0">Andres Mekis</h2>
-                <p><small>2020 - Universidad Andres</small></p>
-                <p class="font-weight-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, necessitatibus. Id modi molestiae quod quibusdam recusandae quasi, consequuntur iusto nulla consectetur architecto inventore.</p>
-                <p class="font-weight-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, necessitatibus. Id modi molestiae quod quibusdam recusandae quasi.</p>
-                <p class="font-weight-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, necessitatibus.</p>
-            </div>
-        </div>
-        <div class="row pt-4">
-            <div class="col-12 col-lg-4">
-                <img src="assets/images/nosotros/img-team.png" class="img-fluid" alt="">
-            </div>
-            <div class="col-12 col-lg-8 pt-4 pt-sm-0 pl-0 pl-sm-4 text-center text-sm-left">
-                <h2 class="mb-0">Andres Mekis</h2>
-                <p><small>2020 - Universidad Andres</small></p>
-                <p class="font-weight-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, necessitatibus. Id modi molestiae quod quibusdam recusandae quasi, consequuntur iusto nulla consectetur architecto inventore.</p>
-                <p class="font-weight-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, necessitatibus. Id modi molestiae quod quibusdam recusandae quasi.</p>
-                <p class="font-weight-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, necessitatibus.</p>
-            </div>
-        </div>
-        <div class="row pt-4">
-            <div class="col-12 col-lg-4">
-                <img src="assets/images/nosotros/img-team.png" class="img-fluid" alt="">
-            </div>
-            <div class="col-12 col-lg-8 pt-4 pt-sm-0 pl-0 pl-sm-4 text-center text-sm-left">
-                <h2 class="mb-0">Andres Mekis</h2>
-                <p><small>2020 - Universidad Andres</small></p>
-                <p class="font-weight-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, necessitatibus. Id modi molestiae quod quibusdam recusandae quasi, consequuntur iusto nulla consectetur architecto inventore.</p>
-                <p class="font-weight-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, necessitatibus. Id modi molestiae quod quibusdam recusandae quasi.</p>
-                <p class="font-weight-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, necessitatibus.</p>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection
 @push('jsPersonalizado')
-    <script>
-       $(document).ready(function ($) {
-            $(".gallery").magnificPopup({
-                delegate: "a",
-                type: "image",
-                tLoading: "Loading image #%curr%...",
-                mainClass: "mfp-img-mobile",
-                gallery: {
-                    enabled: true,
-                    navigateByImgClick: true,
-                    preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-                },
-                image: {
-                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-                }
-            });
-        });
-    </script>
 @endpush

@@ -5,7 +5,7 @@
             <div class="name-site"><p>ANDRÉS MEKIS<br><small>ARQUITECTOS</small></p></div>
         </div>
         <div class="navbar">
-            <a class="btn-collapse-nav" href="#0"><span class="menu-icon"></span></a>
+            <a class="btn-collapse-nav" id="btn-collapse-nav" href="#0"><span class="menu-icon"></span></a>
             <nav class="collapse-nav is-visible">
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link {{ Request::is('proyectos*') ? 'active' : '' }}" href="{{ route('proyecto') }}">Proyectos <i class="bi bi-plus"></i></a></li>
@@ -32,11 +32,11 @@
 <header id="mobile" class="header index-sec">
     <div class="container-fluid">
         <div class="name">
-            <a class="btn-collapse-nav" href="#0"><span class="menu-icon"></span></a>
+            <a class="btn-collapse-nav" id="btn-collapse-nav" href="#0"><span class="menu-icon"></span></a>
             <div class="name-site"><p>ANDRÉS MEKIS<br><small>ARQUITECTOS</small></p></div>
         </div>
         <div class="navbar">
-            <nav class="collapse-nav is-visible">
+            <nav class="collapse-nav is-visible nav-index">
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link {{ Request::is('proyectos*') ? 'active' : '' }}" href="{{ route('proyecto') }}">Proyectos <i class="bi bi-plus"></i></a></li>
                     <li class="nav-item"><a class="nav-link {{ Request::is('construcciones*') ? 'active' : '' }}" href="{{ route('construcciones') }}">Construcciones</a></li>

@@ -64,4 +64,18 @@
         $(document).ready(function(){ 
         });
     </script>
+    {{-- <script>
+        $(document).ready(function ($) {
+            $('.slider-header').owlCarousel({
+                loop: false,
+                nav: false,
+                dots: true,
+                mouseDrag: false,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+                items: 1,
+                autoplay: true
+            });
+        });
+    </script> --}}
 @endpush

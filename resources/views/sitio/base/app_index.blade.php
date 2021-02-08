@@ -11,13 +11,23 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/magnificpopup.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         
         @yield('cssPersonalizado')
     </head>
     <body>
         @include('sitio.base.top_menu_index')
-        <div id="background-header" class="collapse-header header-index set-bg" data-setbg="assets/images/header-0.png"></div>
+        
+        <div class="collapse-header header-index">
+            <div class="owl-header owl-carousel">
+                <div class="background-header item set-bg" data-setbg="assets/images/header-0.png"></div>
+                <div class="background-header item set-bg" data-setbg="assets/images/header-0.png"></div>
+            </div>
+        </div>
+
+        {{-- <div id="background-header" class="collapse-header header-index set-bg" data-setbg="assets/images/header-0.png"></div> --}}
+        
         <main class="content-section collapse-content content-index">
             @yield('contenido')
             @include('sitio.base.footer')
@@ -28,6 +38,21 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <script src="{{ asset('assets/js/magnificpopup.js') }}"></script>
         <script src="{{ asset('assets/js/main.js') }}"></script>
+        <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+        <script>
+            $(document).ready(function ($) {
+                $('.owl-header').owlCarousel({
+                    loop: true,
+                    nav: false,
+                    dots: false,
+                    mouseDrag: true,
+                    animateOut: 'fadeOut',
+                    animateIn: 'fadeIn',
+                    items: 1,
+                    autoplay: true
+                });
+            });
+        </script>
         @stack('jsPersonalizado')
     </body>
 </html>

@@ -2,7 +2,7 @@
 @section('contenido')
 <div class="wrd-block set-bg index-sec" data-setbg="assets/images/bg-melkis.jpg">
     <div class="container-lg">
-        <div class="paragraph">
+        <div class="paragraph pt-5">
             <div class="row align-items-center justify-content-center pb-4">
                 <div class="col-8 text-left"><h2>Misión</h2></div>
                 <div class="col-4 mt-lg-4 mt-sm-0 text-right"><a href="#">ver más</a></div>
@@ -51,3 +51,19 @@
     </div>
 </div>
 @endsection
+@push('jsPersonalizado')
+{{-- <script>
+    $(document).ready(function ($) {
+        $('.owl-header').owlCarousel({
+            loop: false,
+            nav: false,
+            dots: true,
+            mouseDrag: false,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn',
+            items: 1,
+            autoplay: true
+        });
+    });
+</script> --}}
+@endpush
