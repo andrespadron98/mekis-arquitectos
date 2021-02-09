@@ -3,8 +3,8 @@
 <div class="wrd-block inspiration-sec">
     <div class="container container-lg">
         <div class="row mx-2 text-center">
-            {{-- <h3>Desde el año 1993 hemos desarrollado casas, remodelaciones, restaurantes, oficinas a lo largo de Chile Em los ultimos años ha</h3> --}}
-            <p class="pt-2 pb-5">Desde nuestros inicios, debido a la necesidad de satisfacer nuestras propias ideas arquitectónicas fuimos, progresivamente, tomando parte de cada una de las etapas constructivas teniendo especial interés en desarrollar la calidad, eficiencia y estudio de optimización de costos en cada una de ellas.</p>
+            <h3>Desde nuestros inicios, debido a la necesidad de satisfacer nuestras propias ideas arquitectónicas fuimos, progresivamente, tomando parte de cada una de las etapas constructivas teniendo especial interés en desarrollar la calidad, eficiencia y estudio de optimización de costos en cada una de ellas.</h3>
+            {{-- <p class="pt-2 pb-5">Desde nuestros inicios, debido a la necesidad de satisfacer nuestras propias ideas arquitectónicas fuimos, progresivamente, tomando parte de cada una de las etapas constructivas teniendo especial interés en desarrollar la calidad, eficiencia y estudio de optimización de costos en cada una de ellas.</p> --}}
         </div>
         <div class="container w-75">
             <div class="row text-center">
