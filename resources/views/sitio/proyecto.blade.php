@@ -54,7 +54,7 @@
             </div>
         </div>
         <div class="pt-5 mt-4">
-            <div class="owl-page owl-theme gallery-proyecto">
+            <div class="owl-carousel owl-page owl-theme gallery-proyecto">
                 @foreach ($imagenes as $row)
                     <div class="item">
                         <a href="{{ asset('contenido/'.$row->imagen) }}">
