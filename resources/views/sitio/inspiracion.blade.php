@@ -74,8 +74,8 @@
             <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/indiaSpitiValley.jpg"> <img src="assets/images/inspiracion/indiaSpitiValley.jpg" alt="" /></a></div></div>
             <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/indiaSpitiValley2.jpg"> <img src="assets/images/inspiracion/indiaSpitiValley2.jpg" alt="" /></a></div></div>
             <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Jericoacoara-Brasil.jpg"> <img src="assets/images/inspiracion/Jericoacoara-Brasil.jpg" alt="" /></a></div></div>
-            <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Jericoacoara-Brasil_sq.jpg"> <img src="assets/images/inspiracion/Jericoacoara-Brasil_sq.jpg" alt="" /></a></div></div>
-            <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Jericoacoara-Brasil2_sq.jpg"> <img src="assets/images/inspiracion/Jericoacoara-Brasil2_sq.jpg" alt="" /></a></div></div>
+            {{-- <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Jericoacoara-Brasil_sq.jpg"> <img src="assets/images/inspiracion/Jericoacoara-Brasil_sq.jpg" alt="" /></a></div></div> --}}
+            {{-- <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Jericoacoara-Brasil2_sq.jpg"> <img src="assets/images/inspiracion/Jericoacoara-Brasil2_sq.jpg" alt="" /></a></div></div> --}}
             <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Kenya_Masai-Mara.jpg"> <img src="assets/images/inspiracion/Kenya_Masai-Mara.jpg" alt="" /></a></div></div>
             <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Kenya_Masai-Mara2.jpg"> <img src="assets/images/inspiracion/Kenya_Masai-Mara2.jpg" alt="" /></a></div></div>
             <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/La-Defense-Paris.jpg"> <img src="assets/images/inspiracion/La-Defense-Paris.jpg" alt="" /></a></div></div>
@@ -86,7 +86,7 @@
             <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Mancora-Peru.jpg"> <img src="assets/images/inspiracion/Mancora-Peru.jpg" alt="" /></a></div></div>
             <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Monte-St-Michelle.jpg"> <img src="assets/images/inspiracion/Monte-St-Michelle.jpg" alt="" /></a></div></div>
             <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Okabango-Botswana-1.jpg"> <img src="assets/images/inspiracion/Okabango-Botswana-1.jpg" alt="" /></a></div></div>
-            <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Okabango-Botswana-2.jpg"> <img src="assets/images/inspiracion/Okabango-Botswana-2.jpg" alt="" /></a></div></div>
+            {{-- <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Okabango-Botswana-2.jpg"> <img src="assets/images/inspiracion/Okabango-Botswana-2.jpg" alt="" /></a></div></div> --}}
             <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Okabango-Botswana-2a.jpg"> <img src="assets/images/inspiracion/Okabango-Botswana-2a.jpg" alt="" /></a></div></div>
             <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Paine-.jpg"> <img src="assets/images/inspiracion/Paine-.jpg" alt="" /></a></div></div>
             <div class="col-4 col-md-2"><div class="item item-gallery"><a href="assets/images/inspiracion/Paris.jpg"> <img src="assets/images/inspiracion/Paris.jpg" alt="" /></a></div></div>

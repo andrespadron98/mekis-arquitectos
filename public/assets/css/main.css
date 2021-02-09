@@ -74,6 +74,14 @@ ol {
     padding: 0 3rem;
 }
 
+.mfp-bg {
+    z-index: 999999!important;
+}
+
+.mfp-wrap {
+    z-index: 9999999!important;
+}
+
 
 /*  
 	Header Mobile Version

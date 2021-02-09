@@ -11,7 +11,7 @@
                 <div class="col-auto">
                     <img src="assets/images/select.png" class="img-fluid select-paragraph" alt="">
                     <a href="#"><u>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, adipisci neque aspernatur magnam.</u></a>  
-                    <p class="mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia veritatis cumque ad ipsam, vel incidunt odio voluptatum, impedit, quod possimus consequuntur saepe nihil mollitia. Rerum error commodi beatae est officia.</p>
+                    <p class="mt-4">Nos propusimos como oficina satisfacer todas las variadas necesidades que nuestros clientes nos encargan, es por esto que la mayoría de nuestros proyectos abarcan desde la selección del lugar, diseño arquitectónico del proyecto, hasta la construcción final de la obra.</p>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
                 <div class="col-auto">
                     <img src="assets/images/select.png" class="img-fluid select-paragraph" alt="">
                     <a href="#"><u>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, adipisci neque aspernatur magnam.</u></a>  
-                    <p class="mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia veritatis cumque ad ipsam, vel incidunt odio voluptatum, impedit, quod possimus consequuntur saepe nihil mollitia. Rerum error commodi beatae est officia.</p>
+                    <p class="mt-4">Desde el año 1993 hemos desarrollado Viviendas, Remodelaciones, Restaurantes y Oficinas, desarrollado proyectos de arquitectura contemporánea y clásica incluyendo la calidez que caracteriza nuestras propuestas, fiel en mantener el principio de proyectar una obra para que otros puedan ser felices en ella. La respuesta arquitectónica es fruto de las variables que el mundo requiere, es por esto que en nuestros encargos estamos comprometidos en dar respuesta a los requerimientos en cada uno de ellos, siempre manteniendo conciencia en los costos y la armonía en nuestros proyectos desde su concepción. </p>
                 </div>
             </div>
         </div>
