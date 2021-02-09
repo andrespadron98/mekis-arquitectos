@@ -4,7 +4,7 @@
             <div class="logo-site"><img src="{{ asset('assets/images/logotype.png') }}" class="img" alt=""></div>
             <div class="name-site"><p>ANDRÉS MEKIS<br><small>ARQUITECTOS</small></p></div>
         </div>
-        <div class="navbar">
+        <div class="navbar invertido">
             <a class="btn-collapse-nav" href="#0"><span class="menu-icon"></span></a>
             <nav class="no-collapse-nav">
                 <ul class="nav flex-column">

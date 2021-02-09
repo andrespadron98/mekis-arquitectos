@@ -240,6 +240,107 @@ ol {
     transform: rotate(225deg);
 }
 
+#desktop .invertido .btn-collapse-nav {
+    position: absolute;
+    top: 4.8rem;
+    z-index: 999;
+    width: 32px;
+    height: 32px;
+}
+
+#desktop .invertido .btn-collapse-nav .menu-icon {
+    display: inline-block!important;
+    position: absolute!important;
+    left: 50%!important;
+    top: 50%!important;
+    -webkit-transform: translateX(-50%) translateY(-50%)!important;
+    -moz-transform: translateX(-50%) translateY(-50%)!important;
+    -ms-transform: translateX(-50%) translateY(-50%)!important;
+    -o-transform: translateX(-50%) translateY(-50%)!important;
+    transform: translateX(-50%) translateY(-50%)!important;
+    width: 1.8rem!important;
+    height: 2px!important;
+    background-color: rgba(255, 255, 255, 1)!important;
+    -webkit-transition: background-color 0.3s!important;
+    -moz-transition: background-color 0.3s!important;
+    transition: background-color 0.3s!important;
+}
+
+#desktop .invertido .btn-collapse-nav .menu-icon::before,
+#desktop .invertido .btn-collapse-nav .menu-icon:after {
+    content: ''!important;
+    width: 100%!important;
+    height: 100%!important;
+    position: absolute!important;
+    background-color: rgba(255, 255, 255, 1)!important;
+    right: 0!important;
+    -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s!important;
+    -moz-transition: -moz-transform .3s, top .3s, background-color 0s!important;
+    transition: transform .3s, top .3s, background-color 0s!important;
+}
+
+#desktop .invertido .btn-collapse-nav .menu-icon {
+    background-color: rgba(255, 255, 255, 1)!important;
+}
+
+#desktop .invertido .btn-collapse-nav .menu-icon::before,
+#desktop .invertido .btn-collapse-nav .menu-icon::after {
+    background-color: rgba(255, 255, 255, 1)!important;
+}
+
+#desktop .invertido .btn-collapse-nav .menu-icon::before {
+    top: -8px!important;
+}
+
+#desktop .invertido .btn-collapse-nav .menu-icon::after {
+    top: 8px!important;
+}
+
+#desktop .invertido .btn-collapse-nav .menu-icon.is-clicked {
+    background-color: rgba(255, 255, 255, 0)!important;
+}
+
+#desktop .invertido .btn-collapse-nav .menu-icon.is-clicked::before,
+#desktop .invertido .btn-collapse-nav .menu-icon.is-clicked::after {
+    background-color: rgba(255, 255, 255, 1)!important;
+}
+
+#desktop .invertido .btn-collapse-nav .menu-icon.is-clicked::before {
+    top: 0px!important;
+    -webkit-transform: rotate(135deg)!important;
+    -moz-transform: rotate(135deg)!important;
+    -ms-transform: rotate(135deg)!important;
+    -o-transform: rotate(135deg)!important;
+    transform: rotate(135deg)!important;
+}
+
+#desktop .invertido .btn-collapse-nav .menu-icon.is-clicked::after {
+    top: 0px!important;
+    -webkit-transform: rotate(225deg)!important;
+    -moz-transform: rotate(225deg)!important;
+    -ms-transform: rotate(225deg)!important;
+    -o-transform: rotate(225deg)!important;
+    transform: rotate(225deg)!important;
+}
+
+#desktop .invertido .btn-collapse-nav .menu-icon::before {
+    /* top: 0!important; */
+    -webkit-transform: rotate(0)!important;
+    -moz-transform: rotate(0)!important;
+    -ms-transform: rotate(0)!important;
+    -o-transform: rotate(0)!important;
+    transform: rotate(0)!important;
+}
+
+#desktop .invertido .btn-collapse-nav .menu-icon::after {
+    /* top: 0!important; */
+    -webkit-transform: rotate(0)!important;
+    -moz-transform: rotate(0)!important;
+    -ms-transform: rotate(0)!important;
+    -o-transform: rotate(0)!important;
+    transform: rotate(0)!important;
+}
+
 
 /* 
 	Header Desktop Version
