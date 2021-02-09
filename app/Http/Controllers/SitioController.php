@@ -8,6 +8,7 @@ use App\Models\ProyectosCategorias;
 use App\Models\ProyectosImagenes;
 use App\Models\Categorias;
 use App\Models\Proyectos;
+use Mail;
 
 class SitioController extends Controller
 {
@@ -25,7 +26,8 @@ class SitioController extends Controller
     {
         $valores = Configuraciones::pluck('valor','id')->toArray();
         $valores['titulo'] = "PROYECTOS";
-        $valores['img'] = "header-projects.png";
+        $valores['img'][0] = "header-projects.png";
+        $valores['img'][1] = "header-construcciones.png";
         $categorias = Categorias::get();
         $proyectos = Proyectos::get()->toArray();
         $i = 0;
@@ -45,7 +47,9 @@ class SitioController extends Controller
         $imagenes = ProyectosImagenes::where('id_proyecto', $idProyecto)->get();
 
         $valores['titulo'] = "PROYECTOS";
-        $valores['img'] = "header-projects.png";
+        // $valores['img'] = "header-projects.png";
+        $valores['img'][0] = "header-projects.png";
+        $valores['img'][1] = "header-construcciones.png";
 
         if (empty($proyecto)) {
             return redirect(route('proyectos'));
@@ -61,7 +65,9 @@ class SitioController extends Controller
     {
         $valores = Configuraciones::pluck('valor','id')->toArray();
         $valores['titulo'] = "CONSTRUCCIONES";
-        $valores['img'] = "header-construcciones.png";
+        // $valores['img'] = "header-construcciones.png";
+        $valores['img'][0] = "header-projects.png";
+        $valores['img'][1] = "header-construcciones.png";
         return view('sitio.construcciones')
             ->with('valores', $valores);
     }    
@@ -70,7 +76,9 @@ class SitioController extends Controller
     {
         $valores = Configuraciones::pluck('valor','id')->toArray();
         $valores['titulo'] = "NOSOTROS";
-        $valores['img'] = "header-we.png";
+        // $valores['img'] = "header-we.png";
+        $valores['img'][0] = "header-we.png";
+        $valores['img'][1] = "header-construcciones.png";
         return view('sitio.nosotros')
             ->with('valores', $valores);
     }   
@@ -79,7 +87,9 @@ class SitioController extends Controller
     {
         $valores = Configuraciones::pluck('valor','id')->toArray();
         $valores['titulo'] = "INSPIRACIÓN";
-        $valores['img'] = "header-inspiration.png";
+        // $valores['img'] = "header-inspiration.png";
+        $valores['img'][0] = "header-inspiration.png";
+        $valores['img'][1] = "header-construcciones.png";
         return view('sitio.inspiracion')
             ->with('valores', $valores);
     }    
@@ -88,9 +98,13 @@ class SitioController extends Controller
     {
         $valores = Configuraciones::pluck('valor','id')->toArray();
         $valores['titulo'] = "PRENSA";
-        $valores['img'] = "header-projects.png";
+        // $valores['img'] = "header-projects.png";
+        $valores['img'][0] = "header-projects.png";
+        $valores['img'][1] = "header-construcciones.png";
         return view('sitio.prensa')
             ->with('valores', $valores);
     }    
+
+
 
 }

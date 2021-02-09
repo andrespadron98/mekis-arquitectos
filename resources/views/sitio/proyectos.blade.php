@@ -27,7 +27,7 @@
                 @foreach ($proyectos as $row)
                     <div class="col-12 col-sm-4 col-lg-4 @foreach($row['categorias'] as $c) categoria_{{ $c['id_categoria'] }} @endforeach">
                         <div class="item item-gallery">
-                            <a href="{{ route('proyectos', $row['id']) }}">
+                            <a href="{{ route('proyectos', $row['id']."#desc") }}">
                                 <img src="{{ asset("previsualizaciones/".$row['img_previsualizacion']) }}" alt="" />
                                 <div class="img-title">{{ $row['nombre'] }}</div>
                             </a>
