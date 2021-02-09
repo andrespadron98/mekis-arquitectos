@@ -1,5 +1,5 @@
 <header id="desktop" class="header">
-    <div class="container-fuild">
+    <div class="container-fluid">
         <div class="name">
             <div class="logo-site"><img src="{{ asset('assets/images/logotype.png') }}" class="img" alt=""></div>
             <div class="name-site"><p>ANDRÉS MEKIS<br><small>ARQUITECTOS</small></p></div>

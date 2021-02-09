@@ -65,7 +65,42 @@
                         tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
                     }
                 });
+                var scrolable = true;
+                $(window).scroll(function (event) {
+                    var scroll = $(window).scrollTop();
+                    if(scrolable === true && scroll > 1){
+                        ComprimirDescomprimirMenu();
+                        scrolable = false;
+                    }
+                });
             });
+
+            function ComprimirDescomprimirMenu(){
+                $('.menu-icon').toggleClass('is-clicked');
+                if( $('.collapse-nav').hasClass('is-visible') ) {
+                    $('.collapse-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+                } else {
+                    $('.collapse-nav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');	
+                }
+
+                if( $('.no-collapse-nav').hasClass('is-visible') ) {
+                    $('.no-collapse-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+                } else {
+                    $('.no-collapse-nav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');	
+                }
+
+                if( $('.no-collapse-title, .collapse-title').hasClass('is-visible') ) {
+                    $('.no-collapse-title, .collapse-title').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+                } else {
+                    $('.no-collapse-title, .collapse-title').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');	
+                }
+
+                if( $('.collapse-header, .collapse-content').hasClass('is-visible') ) {
+                    $('.collapse-header, .collapse-content').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+                } else {
+                    $('.collapse-header, .collapse-content').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');	
+                }
+            }
         </script>
         @stack('jsPersonalizado')
     </body>
