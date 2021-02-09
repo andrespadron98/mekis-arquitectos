@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateProyectosRequest;
 use App\Repositories\ProyectosRepository;
 use App\Models\ProyectosCategorias;
 use App\Models\ProyectosImagenes;
+use App\Models\Proyectos;
 use App\Models\Categorias;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -74,6 +75,10 @@ class ProyectosController extends AppBaseController
             $filename = 'Previsualizacion-' . $proyectos->id . '.' . $file->getClientOriginalExtension();
             $file->move(public_path('previsualizaciones'), $filename);
             $input['img_previsualizacion'] = $filename;
+
+            $proyectoUp = Proyectos::find($proyectos->id);
+            $proyectoUp->img_previsualizacion = $filename;
+            $proyectoUp->save();
         }
 
 
@@ -90,7 +95,6 @@ class ProyectosController extends AppBaseController
 
            }
         }
-
 
         $categorias = count($input['categorias']);
         for ($i=0; $i < $categorias; $i++) { 
