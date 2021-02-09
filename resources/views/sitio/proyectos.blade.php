@@ -23,7 +23,7 @@
             </ul>
         </div>
         <div class="col-12 col-sm-8 col-xl-9">
-            <div class="row gallery">
+            <div class="row gallery-proyectos">
                 @foreach ($proyectos as $row)
                     <div class="col-12 col-sm-4 col-lg-4 @foreach($row['categorias'] as $c) categoria_{{ $c['id_categoria'] }} @endforeach">
                         <div class="item item-gallery">

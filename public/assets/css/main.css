@@ -400,6 +400,10 @@ ol {
     background-position: top center;
 }
 
+.filter {
+    filter: brightness(0.6);
+}
+
 .collapse-relative {
     position: relative!important;
 }
@@ -564,6 +568,38 @@ main {
     transition: all 0.35s ease;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+}
+
+.gallery-proyectos .item-gallery img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+.gallery-proyectos .item {
+    height: 10rem;
+    overflow: hidden;
+    padding-bottom: 50%;
+    background-color: #efefef;
+    position: relative;
+}
+
+.gallery-proyectos>[class*=col-] {
+    padding: .5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-proyectos .item-gallery a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .gallery .item-gallery a {

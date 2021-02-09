@@ -21,8 +21,8 @@
         
         <div class="collapse-header header-index">
             <div class="owl-header owl-carousel">
-                <div class="background-header item set-bg" data-setbg="assets/images/header-0.png"></div>
-                <div class="background-header item set-bg" data-setbg="assets/images/header-0.png"></div>
+                <div class="background-header item set-bg filter" data-setbg="assets/images/header-0.png"></div>
+                <div class="background-header item set-bg filter" data-setbg="assets/images/header-0.png"></div>
             </div>
         </div>
 
