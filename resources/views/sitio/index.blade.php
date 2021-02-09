@@ -36,7 +36,7 @@
             <div class="col-6 text-left"><h1>Proyectos</h1></div>
             <div class="col-6 mt-4 mt-sm-0 text-right link"><a href="{{ route('proyecto') }}">TODOS LOS PROYECTOS <img src="assets/images/select.png" class="img-fluid select-paragraph" alt=""></a></div>
         </div>
-        <div class="row gallery">
+        <div class="row gallery-index">
             @foreach ($proyectos as $row)
                 <div class="col-12 col-md-4">
                     <div class="item">
