@@ -6,45 +6,47 @@
             <h3>Desde el año 1993 hemos desarrollado casas, remodelaciones, restaurantes, oficinas a lo largo de Chile Em los ultimos años ha</h3>
             <p class="pt-2 pb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium aliquid totam voluptates natus cum perspiciatis, veniam ipsum reiciendis sequi, reprehenderit soluta vel magni nemo earum inventore labore fugiat iste voluptatem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium aliquid totam voluptates natus cum perspiciatis, veniam ipsum reiciendis sequi, reprehenderit soluta vel magni nemo earum inventore labore fugiat iste voluptatem.</p>
         </div>
-        <div class="row text-center">
-            <h2 class="py-4 text-center w-100">CHICUREO</h2>
-            <div class="position-relative w-100">
-                <div class="sliderwide"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid"></div>
-                <div class="sliderwide"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid"></div>
-                <div class="sliderwide"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid"></div>
-                <div class="sliderwide"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid"></div>
-                <div class="sliderwide"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid"></div>
-                <div class="sliderwide"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid"></div>
-                <div class="sliderwide"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid"></div>
-                <div class="owl-page owl-carousel pt-1">
-                    <div class="item"><img src="assets/images/construcciones/img-chicureo-00.png" class="img-fluid cursor-pointer" onclick="currentSlide(1)" alt=""></div>
-                    <div class="item"><img src="assets/images/construcciones/img-chicureo-00.png" class="img-fluid cursor-pointer" onclick="currentSlide(2)" alt=""></div>
-                    <div class="item"><img src="assets/images/construcciones/img-chicureo-00.png" class="img-fluid cursor-pointer" onclick="currentSlide(3)" alt=""></div>
-                    <div class="item"><img src="assets/images/construcciones/img-chicureo-00.png" class="img-fluid cursor-pointer" onclick="currentSlide(4)" alt=""></div>
-                    <div class="item"><img src="assets/images/construcciones/img-chicureo-00.png" class="img-fluid cursor-pointer" onclick="currentSlide(5)" alt=""></div>
-                    <div class="item"><img src="assets/images/construcciones/img-chicureo-00.png" class="img-fluid cursor-pointer" onclick="currentSlide(6)" alt=""></div>
-                    <div class="item"><img src="assets/images/construcciones/img-chicureo-00.png" class="img-fluid cursor-pointer" onclick="currentSlide(7)" alt=""></div>
+        <div class="container w-75">
+            <div class="row text-center">
+                <h2 class="py-4 text-center w-100">CHICUREO</h2>
+                <div class="position-relative w-100">
+                    <div class="sliderwide"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid"></div>
+                    <div class="sliderwide"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid"></div>
+                    <div class="sliderwide"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid"></div>
+                    <div class="sliderwide"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid"></div>
+                    <div class="sliderwide"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid"></div>
+                    <div class="sliderwide"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid"></div>
+                    <div class="sliderwide"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid"></div>
+                    <div class="owl-page owl-carousel pt-1">
+                        <div class="item"><img src="assets/images/construcciones/img-chicureo-00.png" class="img-fluid cursor-pointer" onclick="currentSlide(1)" alt=""></div>
+                        <div class="item"><img src="assets/images/construcciones/img-chicureo-00.png" class="img-fluid cursor-pointer" onclick="currentSlide(2)" alt=""></div>
+                        <div class="item"><img src="assets/images/construcciones/img-chicureo-00.png" class="img-fluid cursor-pointer" onclick="currentSlide(3)" alt=""></div>
+                        <div class="item"><img src="assets/images/construcciones/img-chicureo-00.png" class="img-fluid cursor-pointer" onclick="currentSlide(4)" alt=""></div>
+                        <div class="item"><img src="assets/images/construcciones/img-chicureo-00.png" class="img-fluid cursor-pointer" onclick="currentSlide(5)" alt=""></div>
+                        <div class="item"><img src="assets/images/construcciones/img-chicureo-00.png" class="img-fluid cursor-pointer" onclick="currentSlide(6)" alt=""></div>
+                        <div class="item"><img src="assets/images/construcciones/img-chicureo-00.png" class="img-fluid cursor-pointer" onclick="currentSlide(7)" alt=""></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row text-center">
-            <h2 class="py-4 text-center w-100">LA BARCA</h2>
-            <div class="position-relative w-100">
-                <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
-                <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
-                <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
-                <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
-                <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
-                <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
-                <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
-                <div class="owl-page owl-carousel pt-1">
-                    <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(1)" alt=""></div>
-                    <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(2)" alt=""></div>
-                    <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(3)" alt=""></div>
-                    <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(4)" alt=""></div>
-                    <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(5)" alt=""></div>
-                    <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(6)" alt=""></div>
-                    <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(7)" alt=""></div>
+            <div class="row text-center">
+                <h2 class="py-4 text-center w-100">LA BARCA</h2>
+                <div class="position-relative w-100">
+                    <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
+                    <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
+                    <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
+                    <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
+                    <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
+                    <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
+                    <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
+                    <div class="owl-page owl-carousel pt-1">
+                        <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(1)" alt=""></div>
+                        <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(2)" alt=""></div>
+                        <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(3)" alt=""></div>
+                        <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(4)" alt=""></div>
+                        <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(5)" alt=""></div>
+                        <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(6)" alt=""></div>
+                        <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(7)" alt=""></div>
+                    </div>
                 </div>
             </div>
         </div>

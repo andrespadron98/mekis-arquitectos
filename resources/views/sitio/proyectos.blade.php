@@ -25,7 +25,7 @@
         <div class="col-12 col-sm-8 col-xl-9">
             <div class="row gallery">
                 @foreach ($proyectos as $row)
-                    <div class="col-12 col-sm-6 col-lg-6 @foreach($row['categorias'] as $c) categoria_{{ $c['id_categoria'] }} @endforeach">
+                    <div class="col-12 col-sm-4 col-lg-4 @foreach($row['categorias'] as $c) categoria_{{ $c['id_categoria'] }} @endforeach">
                         <div class="item item-gallery">
                             <a href="{{ route('proyectos', $row['id']) }}">
                                 <img src="{{ asset("previsualizaciones/".$row['img_previsualizacion']) }}" alt="" />
@@ -64,18 +64,4 @@
         $(document).ready(function(){ 
         });
     </script>
-    {{-- <script>
-        $(document).ready(function ($) {
-            $('.slider-header').owlCarousel({
-                loop: false,
-                nav: false,
-                dots: true,
-                mouseDrag: false,
-                animateOut: 'fadeOut',
-                animateIn: 'fadeIn',
-                items: 1,
-                autoplay: true
-            });
-        });
-    </script> --}}
 @endpush

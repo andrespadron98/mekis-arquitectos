@@ -451,7 +451,7 @@ ol {
 }
 
 .collapse-header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0; 
     right: 0;
@@ -702,6 +702,14 @@ main {
 
 .prensa-sec .gallery .item {
     height: 20vw;
+}
+
+.inspiration-sec .gallery .item {
+    height: 5rem;
+}
+
+.inspiration-sec .gallery .item-gallery img {
+    filter: grayscale(0);
 }
 
 .prensa-sec .gallery .item img {
