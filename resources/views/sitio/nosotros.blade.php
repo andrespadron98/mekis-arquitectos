@@ -34,7 +34,7 @@
         </div>
     </div>
 </div>
-<div class="wrd-block prensa-sec pb-0">
+{{-- <div class="wrd-block prensa-sec pb-0">
     <div class="container container-lg">
         <div class="row">
             <div class="col-12 col-lg-4">
@@ -47,7 +47,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection
 @push('jsPersonalizado')
 @endpush
