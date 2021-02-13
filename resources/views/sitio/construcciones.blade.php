@@ -28,16 +28,16 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="row text-center">
+            <div class="row text-center">
                 <h2 class="py-4 text-center w-100">LA BARCA</h2>
                 <div class="position-relative w-100">
-                    <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
-                    <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
-                    <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
-                    <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
-                    <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
-                    <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
-                    <div class="sliderwide2"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/img-barca-00-wide.png" class="img-fluid position-absolute" style="left: 0;"></div>
                     <div class="owl-page owl-carousel pt-1">
                         <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(1)" alt=""></div>
                         <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(2)" alt=""></div>
@@ -48,7 +48,7 @@
                         <div class="item"><img src="assets/images/construcciones/img-barca-00.png" class="img-fluid cursor-pointer" onclick="currentSlide2(7)" alt=""></div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
         </div>
     </div>
 </div>
