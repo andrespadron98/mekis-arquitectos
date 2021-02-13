@@ -4,7 +4,7 @@
     <div class="container container-lg">
         <div class="row mx-2 text-center">
             {{-- <h3>Desde nuestros inicios, debido a la necesidad de satisfacer nuestras propias ideas arquitectónicas fuimos, progresivamente, tomando parte de cada una de las etapas constructivas teniendo especial interés en desarrollar la calidad, eficiencia y estudio de optimización de costos en cada una de ellas.</h3> --}}
-            <p class="pt-5 mt-4 pb-5">Desde nuestros inicios, debido a la necesidad de satisfacer nuestras propias ideas arquitectónicas fuimos, progresivamente, tomando parte de cada una de las etapas constructivas teniendo especial interés en desarrollar la calidad, eficiencia y estudio de optimización de costos en cada una de ellas.</p>
+            <p class="pt-sm-5 mt-sm-4 pb-5">Desde nuestros inicios, debido a la necesidad de satisfacer nuestras propias ideas arquitectónicas fuimos, progresivamente, tomando parte de cada una de las etapas constructivas teniendo especial interés en desarrollar la calidad, eficiencia y estudio de optimización de costos en cada una de ellas.</p>
         </div>
         <div class="container w-75">
             <div class="row text-center">
