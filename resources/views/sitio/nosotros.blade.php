@@ -1,6 +1,6 @@
 @extends('sitio.base.app')
 @section('contenido')
-<div class="wrd-block prensa-sec py-0">
+<div class="wrd-block prensa-sec py-0 set-bg" data-setbg="assets/images/bg-melkis.jpg">
     <div class="container container-lg">
         <h1 class="text-left py-5">EQUIPO</h1>
         <div class="row">

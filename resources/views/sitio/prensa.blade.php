@@ -1,6 +1,6 @@
 @extends('sitio.base.app')
 @section('contenido')
-<div class="wrd-block prensa-sec">
+<div class="wrd-block prensa-sec set-bg" data-setbg="assets/images/bg-melkis.jpg">
     <div class="container container-lg">
         <div class="row">
             {{-- <div class="col-4 col-md-3"><div class="item item-gallery"><img src="assets/images/prensa/img-prensa-00.jpg" alt="" /></div></div> --}}
