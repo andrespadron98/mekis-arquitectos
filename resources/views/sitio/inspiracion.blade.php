@@ -1,6 +1,6 @@
 @extends('sitio.base.app')
 @section('contenido')
-<div class="wrd-block inspiration-sec set-bg" data-setbg="assets/images/bg-melkis.jpg">
+<div class="wrd-block inspiration-sec set-bg" data-setbg="assets/images/bg-melkis.jpg" style="background-size: contain;">
     <div class="container container-lg">
         <div class="row mx-2">
             {{-- <h3>Desde el año 1993 hemos desarrollado casas, remodelaciones, restaurantes, oficinas a lo largo de Chile Em los ultimos años ha</h3> --}}
