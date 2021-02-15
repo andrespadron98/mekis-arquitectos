@@ -2,12 +2,12 @@
 @section('contenido')
 <div class="wrd-block inspiration-sec set-bg" data-setbg="assets/images/bg-melkis.jpg" style="background-size: contain;">
     <div class="container container-lg">
-        <div class="row mx-2 text-center">
+        <div class="row mx-2 text-center w-75 mx-auto">
             {{-- <h3>Desde nuestros inicios, debido a la necesidad de satisfacer nuestras propias ideas arquitectónicas fuimos, progresivamente, tomando parte de cada una de las etapas constructivas teniendo especial interés en desarrollar la calidad, eficiencia y estudio de optimización de costos en cada una de ellas.</h3> --}}
-            <p class="pt-sm-5 mt-sm-4 pb-5">Desde nuestros inicios, debido a la necesidad de satisfacer nuestras propias ideas arquitectónicas fuimos, progresivamente, tomando parte de cada una de las etapas constructivas teniendo especial interés en desarrollar la calidad, eficiencia y estudio de optimización de costos en cada una de ellas.</p>
+            <p class="pb-5">Desde nuestros inicios, debido a la necesidad de satisfacer nuestras propias ideas arquitectónicas fuimos, progresivamente, tomando parte de cada una de las etapas constructivas teniendo especial interés en desarrollar la calidad, eficiencia y estudio de optimización de costos en cada una de ellas.</p>
         </div>
         <div class="container w-75">
-            <div class="row text-center mt-5 pt-5 pb-5 mb-5">
+            <div class="row text-center  pb-5 mb-5">
                 <h2 class="py-4 text-center w-100">CHICUREO</h2>
                 <div class="position-relative w-100">
                     <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/img-chicureo-00-wide.png" class="img-fluid position-absolute" style="left: 0;"></div>
