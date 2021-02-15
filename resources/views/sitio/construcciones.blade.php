@@ -1,6 +1,6 @@
 @extends('sitio.base.app')
 @section('contenido')
-<div class="wrd-block inspiration-sec set-bg" data-setbg="assets/images/bg-melkis.jpg">
+<div class="wrd-block inspiration-sec set-bg" data-setbg="assets/images/bg-melkis.jpg" style="background-size: contain;">
     <div class="container container-lg">
         <div class="row mx-2 text-center">
             {{-- <h3>Desde nuestros inicios, debido a la necesidad de satisfacer nuestras propias ideas arquitectónicas fuimos, progresivamente, tomando parte de cada una de las etapas constructivas teniendo especial interés en desarrollar la calidad, eficiencia y estudio de optimización de costos en cada una de ellas.</h3> --}}
