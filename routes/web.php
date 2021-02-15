@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\SitioController::class, 'index']);
+Route::get('/', [App\Http\Controllers\SitioController::class, 'index'])->name('index');
 Route::get('/proyectos', [App\Http\Controllers\SitioController::class, 'proyectos'])->name('proyecto');
 Route::get('/proyectos/{idProyecto}', [App\Http\Controllers\SitioController::class, 'verProyecto'])->name('proyectos');
 Route::get('/construcciones', [App\Http\Controllers\SitioController::class, 'construcciones'])->name('construcciones');

@@ -1,8 +1,16 @@
 <header id="desktop" class="header index-sec">
     <div class="container-fluid">
         <div class="name">
-            <div class="logo-site"><img src="assets/images/logotype.png" class="img" alt=""></div>
-            <div class="name-site"><p>ANDRÉS MEKIS<br><small>ARQUITECTOS</small></p></div>
+            <div class="logo-site">
+                <a href="{{ route('index') }}">
+                    <img src="{{ asset('assets/images/logotype.png') }}" class="img" alt="">
+                </a>
+            </div>
+            <div class="name-site">
+                <a href="{{ route('index') }}">
+                    <p>ANDRÉS MEKIS<br><small>ARQUITECTOS</small></p>
+                </a>
+            </div>
         </div>
         <div class="navbar">
             <a class="btn-collapse-nav" id="btn-collapse-nav" href="#0"><span class="menu-icon"></span></a>
@@ -50,7 +58,9 @@
         <div class="title">
             <div class="no-collapse-title is-visible">
                 <div class="logo-site">
-                    <img src="assets/images/logotype.png" alt="">
+                    <a href="{{ route('index') }}">
+                        <img src="assets/images/logotype.png" alt="">
+                    </a>
                 </div>
                 <h2>ARQUITECTURA<br>&<br>CONSTRUCCION</h2>
                 <div class="d-flex justify-content-center">
