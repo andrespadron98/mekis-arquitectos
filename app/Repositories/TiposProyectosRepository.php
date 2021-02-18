@@ -2,32 +2,22 @@
 
 namespace App\Repositories;
 
-use App\Models\Proyectos;
+use App\Models\TiposProyectos;
 use App\Repositories\BaseRepository;
 
 /**
- * Class ProyectosRepository
+ * Class TiposProyectosRepository
  * @package App\Repositories
- * @version January 29, 2021, 7:08 pm UTC
+ * @version February 18, 2021, 8:50 pm UTC
 */
 
-class ProyectosRepository extends BaseRepository
+class TiposProyectosRepository extends BaseRepository
 {
     /**
      * @var array
      */
     protected $fieldSearchable = [
-        'nombre',
-        'comuna',
-        'ciudad',
-        'tipo',
-        'descripcion',
-        'habitaciones',
-        'metros_cuadrados_terreno',
-        'piscina',
-        'jacuzzi',
-        'estacionamientos',
-        'img_previsualizacion'
+        'nombre'
     ];
 
     /**
@@ -45,6 +35,6 @@ class ProyectosRepository extends BaseRepository
      **/
     public function model()
     {
-        return Proyectos::class;
+        return TiposProyectos::class;
     }
 }

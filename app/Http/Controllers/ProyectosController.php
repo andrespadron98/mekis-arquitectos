@@ -9,6 +9,7 @@ use App\Models\ProyectosCategorias;
 use App\Models\ProyectosImagenes;
 use App\Models\Proyectos;
 use App\Models\Categorias;
+use App\Models\TiposProyectos;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
@@ -48,7 +49,9 @@ class ProyectosController extends AppBaseController
     {
         
         $categoriasItems = Categorias::pluck('nombre','id')->toArray();
+        $tiposItems = TiposProyectos::pluck('nombre','id')->toArray();
         return view('proyectos.create')
+                ->with('tiposItems', $tiposItems)
                 ->with('categoriasItems', $categoriasItems);
     }
 
@@ -148,6 +151,7 @@ class ProyectosController extends AppBaseController
 
         
         $categoriasItems = Categorias::pluck('nombre','id')->toArray();
+        $tiposItems = TiposProyectos::pluck('nombre','id')->toArray();
         
         $categorias = ProyectosCategorias::where('id_proyecto', $id)->get();
         $arrayCategorias = "[";
@@ -164,6 +168,7 @@ class ProyectosController extends AppBaseController
         return view('proyectos.edit')
                 ->with('proyectos', $proyectos)
                 ->with('arrayCategorias', $arrayCategorias)
+                ->with('tiposItems', $tiposItems)
                 ->with('categoriasItems', $categoriasItems);
 
     }

@@ -38,3 +38,5 @@ Route::resource('configuraciones', App\Http\Controllers\ConfiguracionesControlle
 Route::resource('categorias', App\Http\Controllers\CategoriasController::class);
 
 Route::resource('proyectosPortal', App\Http\Controllers\ProyectosController::class);
+
+Route::resource('tiposProyectos', App\Http\Controllers\TiposProyectosController::class);

@@ -43,7 +43,10 @@ class SitioController extends Controller
 
     public function verProyecto($idProyecto)
     {
-        $proyecto = Proyectos::find($idProyecto);
+        $proyecto = Proyectos::select('proyectos.*', 'tipos_proyectos.nombre as tipoProyecto')
+                               ->where('proyectos.id', $idProyecto)
+                               ->join('tipos_proyectos', 'tipos_proyectos.id', '=', 'proyectos.tipo')
+                               ->first();
         $imagenes = ProyectosImagenes::where('id_proyecto', $idProyecto)->get();
 
         $valores['titulo'] = "PROYECTOS";

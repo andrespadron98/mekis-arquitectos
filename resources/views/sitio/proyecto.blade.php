@@ -3,6 +3,16 @@
 <div class="wrd-block project-sec set-bg" data-setbg="../assets/images/bg-melkis.jpg" style="background-size: contain;">
     <div id="desc" class="container-lg">
         <div class="row">
+            <div class="col-12">
+                <div class="row pb-4">
+                    <div class="col-6">
+                        <span class="text-uppercase">{{ $proyecto->tipoProyecto }}</span>
+                    </div>
+                    <div class="col-6 text-right">
+                        <a href="{{ route('proyecto') }}"><u>volver</u></a>
+                    </div>
+                </div>
+            </div>
             <div class="col-12 col-lg-5">
                 <div class="pb-4">
                     <h1 class="font-weight-light">{{ $proyecto->nombre }}</h1>
@@ -11,7 +21,7 @@
                 <p>{{ $proyecto->descripcion }}</p>
             </div>
             <div class="col-12 col-lg-7">
-                <div class="container w-50">
+                <div class="container w-50 float-right mr-5">
                     <div class="row">
                         <div class="col-6 col-sm-4">
                             <img src="{{ asset('/assets/images/icons/bedrooms.png') }}" class="img-fluid" alt="">
@@ -49,10 +59,12 @@
                             </div>
                         @endif
                         -->
-                        <div class="col-6 col-sm-4">
-                            <img src="{{ asset('assets/images/icons/parking.png') }}" class="img-fluid" alt="">
-                            <p class="text-center"><small>Estacionamientos</small></p>
-                        </div>
+                        @if ($proyecto->estacionamientos === 1)
+                            <div class="col-6 col-sm-4">
+                                <img src="{{ asset('assets/images/icons/parking.png') }}" class="img-fluid" alt="">
+                                <p class="text-center"><small>Estacionamientos</small></p>
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>

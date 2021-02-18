@@ -45,6 +45,7 @@ class Proyectos extends Model
         'metros_cuadrados',
         'metros_cuadrados_terreno',
         'metros_cuadrados_terraza',
+        'tipo',
         'piscina',
         'jacuzzi',
         'estacionamientos',
@@ -59,6 +60,7 @@ class Proyectos extends Model
     protected $casts = [
         'id' => 'integer',
         'nombre' => 'string',
+        'tipo' => 'string',
         'comuna' => 'string',
         'ciudad' => 'string',
         'banos' => 'integer',
@@ -80,6 +82,7 @@ class Proyectos extends Model
     public static $rules = [
         'nombre' => 'required',
         'comuna' => 'required',
+        'tipo' => 'required',
         'ciudad' => 'required',
         'descripcion' => 'required',
         'banos' => 'required',

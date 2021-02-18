@@ -10,6 +10,12 @@
     {!! Form::select('categorias', $categoriasItems, null, ['class' => 'form-control', 'multiple' => 'multiple', 'name' => 'categorias[]']) !!}
 </div>
 
+<!-- Tipo Proyecto Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('tipo', 'Tipo de Proyecto:') !!}
+    {!! Form::select('tipo', $tiposItems, null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Comuna Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('comuna', 'Comuna:') !!}
@@ -41,17 +47,22 @@
     {!! Form::number('metros_cuadrados', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Metros Cuadrados Terreno Field -->
+{!! Form::hidden('metros_cuadrados_terreno', 0, ['class' => 'form-control']) !!}
+
+{{-- <!-- Metros Cuadrados Terreno Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('metros_cuadrados_terreno', 'Metros Cuadrados Terreno:') !!}
-    {!! Form::number('metros_cuadrados_terreno', null, ['class' => 'form-control']) !!}
-</div>
+    {!! Form::hidden('metros_cuadrados_terreno', 0, ['class' => 'form-control']) !!}
+</div> --}}
 
+{!! Form::hidden('metros_cuadrados_terraza', 0, ['class' => 'form-control']) !!}
+
+{{-- 
 <!-- Metros Cuadrados Terraza Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('metros_cuadrados_terraza', 'Metros Cuadrados Terraza:') !!}
     {!! Form::number('metros_cuadrados_terraza', null, ['class' => 'form-control']) !!}
-</div>
+</div> --}}
 
 <!-- Piscina Field -->
 <div class="form-group col-sm-6">
@@ -68,7 +79,7 @@
 <!-- Estacionamientos Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('estacionamientos', 'Estacionamientos:') !!}
-    {!! Form::number('estacionamientos', null, ['class' => 'form-control']) !!}
+    {!! Form::select('estacionamientos', ['1' => 'Si', '0' => 'No'], null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Descripcion Field -->

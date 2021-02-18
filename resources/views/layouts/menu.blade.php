@@ -22,3 +22,7 @@
 </li>
 
 
+<li class="side-menus {{ Request::is('tiposProyectos*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('tiposProyectos.index') }}"><i class="fas fa-building"></i><span>Tipos Proyectos</span></a>
+</li>
+
