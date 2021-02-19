@@ -21,7 +21,7 @@
                     <li class="nav-item"><a class="nav-link {{ Request::is('nosotros*') ? 'active' : '' }}" href="{{ route('nosotros') }}">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link {{ Request::is('inspiracion*') ? 'active' : '' }}" href="{{ route('inspiracion') }}">Inspiración</a></li>
                     <li class="nav-item"><a class="nav-link {{ Request::is('prensa*') ? 'active' : '' }}" href="{{ route('prensa') }}">Prensa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mailto:{{ $valores[5] }}">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -51,7 +51,7 @@
                     <li class="nav-item"><a class="nav-link {{ Request::is('nosotros*') ? 'active' : '' }}" href="{{ route('nosotros') }}">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link {{ Request::is('inspiracion*') ? 'active' : '' }}" href="{{ route('inspiracion') }}">Inspiración</a></li>
                     <li class="nav-item"><a class="nav-link {{ Request::is('prensa*') ? 'active' : '' }}" href="{{ route('prensa') }}">Prensa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mailto:{{ $valores[5] }}">Contacto</a></li>
                 </ul>
             </nav>
         </div>

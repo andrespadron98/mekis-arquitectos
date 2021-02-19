@@ -9,6 +9,10 @@
     <a class="nav-link" href="{{ route('proyectosPortal.index') }}"><i class="fas fa-building"></i><span>Proyectos</span></a>
 </li>
 
+<li class="side-menus {{ Request::is('tiposProyectos*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('tiposProyectos.index') }}"><i class="fas fa-building"></i><span>Tipos Proyectos</span></a>
+</li>
+
 <li class="side-menus {{ Request::is('categorias*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('categorias.index') }}"><i class="fas fa-bars"></i><span>Categorias</span></a>
 </li>
@@ -19,10 +23,5 @@
 
 <li class="side-menus {{ Request::is('configuraciones*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('configuraciones.index') }}"><i class="fas fa-cogs"></i><span>Configuraciones</span></a>
-</li>
-
-
-<li class="side-menus {{ Request::is('tiposProyectos*') ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('tiposProyectos.index') }}"><i class="fas fa-building"></i><span>Tipos Proyectos</span></a>
 </li>
 

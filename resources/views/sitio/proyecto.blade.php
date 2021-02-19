@@ -1,6 +1,6 @@
 @extends('sitio.base.app')
 @section('contenido')
-<div class="wrd-block project-sec set-bg" data-setbg="../assets/images/bg-melkis.jpg" style="background-size: contain;">
+<div class="wrd-block project-sec" data-setbg="../assets/images/proyects/bg-proyectos.png" style="background-size: contain;">
     <div id="desc" class="container-lg">
         <div class="row">
             <div class="col-12">
@@ -21,17 +21,17 @@
                 <p>{{ $proyecto->descripcion }}</p>
             </div>
             <div class="col-12 col-lg-7">
-                <div class="container w-50 float-right mr-5">
+                <div class="container w-50 ">
                     <div class="row">
-                        <div class="col-6 col-sm-4">
+                        <div class="col-6 col-sm-6">
                             <img src="{{ asset('/assets/images/icons/bedrooms.png') }}" class="img-fluid" alt="">
                             <p class="text-center">{{ $proyecto->habitaciones }}<br><small>Habitaciones</small></p>
                         </div>
-                        <div class="col-6 col-sm-4">
+                        <div class="col-6 col-sm-6">
                             <img src="{{ asset('assets/images/icons/bathrooms.png') }}" class="img-fluid" alt="">
                             <p class="text-center">{{ $proyecto->banos }}<br><small>Baños</small></p>
                         </div>
-                        <div class="col-6 col-sm-4">
+                        <div class="col-6 col-sm-6">
                             <img src="{{ asset('assets/images/icons/constructed.png') }}" class="img-fluid" alt="">
                             <p class="text-center">{{ $proyecto->metros_cuadrados }} ㎡<br><small>Construcción</small></p>
                         </div>
@@ -42,12 +42,12 @@
                         </div>
                         -->
                         @if ($proyecto->piscina === 1)
-                            <div class="col-6 col-sm-4">
+                            <div class="col-6 col-sm-6">
                                 <img src="{{ asset('assets/images/icons/swimming.png') }}" class="img-fluid" alt="">
                                 <p class="text-center"><small>Piscina</small></p>
                             </div>
                         @endif
-                        <div class="col-6 col-sm-4">
+                        <div class="col-6 col-sm-6">
                             <img src="{{ asset('assets/images/icons/terraces.png') }}" class="img-fluid" alt="">
                             <p class="text-center"><small>Terraza</small></p>
                         </div>

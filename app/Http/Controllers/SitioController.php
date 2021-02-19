@@ -43,6 +43,7 @@ class SitioController extends Controller
 
     public function verProyecto($idProyecto)
     {
+        $valores = Configuraciones::pluck('valor','id')->toArray();
         $proyecto = Proyectos::select('proyectos.*', 'tipos_proyectos.nombre as tipoProyecto')
                                ->where('proyectos.id', $idProyecto)
                                ->join('tipos_proyectos', 'tipos_proyectos.id', '=', 'proyectos.tipo')

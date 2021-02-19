@@ -1,6 +1,6 @@
 @extends('sitio.base.app')
 @section('contenido')
-<div class="wrd-block project-sec set-bg" data-setbg="assets/images/bg-melkis.jpg" style="background-size: contain;">
+<div class="wrd-block project-sec" data-setbg="assets/images/bg-melkis.jpg" style="background-size: contain;">
     <div class="container-lg">
     <div class="row">
         <div class="col-12 col-sm-4 col-xl-3">
