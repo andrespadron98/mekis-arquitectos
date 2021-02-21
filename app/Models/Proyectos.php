@@ -84,7 +84,7 @@ class Proyectos extends Model
         'comuna' => 'required',
         'tipo' => 'required',
         'ciudad' => 'required',
-        'descripcion' => 'required',
+        // 'descripcion' => 'required',
         'banos' => 'required',
         'habitaciones' => 'required',
         'metros_cuadrados' => 'required',

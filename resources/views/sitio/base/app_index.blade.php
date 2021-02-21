@@ -22,7 +22,12 @@
         <div class="collapse-header header-index">
             <div class="owl-header owl-carousel">
                 <div class="background-header item set-bg filter" data-setbg="assets/images/header-0.png"></div>
-                <div class="background-header item set-bg filter" data-setbg="assets/images/header-0.png"></div>
+                <div class="background-header item set-bg filter" data-setbg="assets/images/header-1.png"></div>
+                <div class="background-header item set-bg filter" data-setbg="assets/images/header-2.png"></div>
+                <div class="background-header item set-bg filter" data-setbg="assets/images/header-3.png"></div>
+                <div class="background-header item set-bg filter" data-setbg="assets/images/header-4.png"></div>
+                <div class="background-header item set-bg filter" data-setbg="assets/images/header-5.png"></div>
+                <div class="background-header item set-bg filter" data-setbg="assets/images/header-6.png"></div>
             </div>
         </div>
 
