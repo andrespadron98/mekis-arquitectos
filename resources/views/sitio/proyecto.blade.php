@@ -21,7 +21,7 @@
                 <p>{{ $proyecto->descripcion }}</p>
             </div>
             <div class="col-12 col-lg-7">
-                <div class="container container-lg paragraph">
+                <div class="container container-lg project-icon">
                     <div class="row">
                         <div class="col-6 col-sm-4">
                             <img src="{{ asset('/assets/images/icons/bedrooms.png') }}" class="img-fluid" alt="">
