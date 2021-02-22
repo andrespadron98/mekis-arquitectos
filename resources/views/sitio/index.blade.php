@@ -2,11 +2,12 @@
 @section('contenido')
 <div class="wrd-block set-bg index-sec" data-setbg="assets/images/bg-melkis.jpg">
     <div class="container container-lg">
+        <div class="row align-items-center justify-content-center pb-4 w-100">
+            <div class="col-8 text-left"><h2>Nosotros</h2></div>
+            <div class="col-4 mt-lg-4 mt-sm-0 text-right"><a href="{{ route('nosotros') }}">ver más</a></div>
+        </div>
         <div class="paragraph">
-            <div class="row align-items-center justify-content-center pb-4">
-                <div class="col-8 text-left"><h2>Nosotros</h2></div>
-                <div class="col-4 mt-lg-4 mt-sm-0 text-right"><a href="{{ route('nosotros') }}">ver más</a></div>
-            </div>
+            
             <div class="row align-items-center justify-content-center w-75">
                 <div class="col-auto">
                     {{-- <img src="assets/images/select.png" class="img-fluid select-paragraph" alt=""> --}}

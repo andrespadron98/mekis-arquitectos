@@ -21,8 +21,9 @@
                 <p>{{ $proyecto->descripcion }}</p>
             </div>
             <div class="col-12 col-lg-7">
-                <div class="container w-50 ">
+                <div class="container container-lg project-icon">
                     <div class="row">
+<<<<<<< HEAD
                         @if ($proyecto->habitaciones > 0)
                             <div class="col-6 col-sm-6">
                                 <img src="{{ asset('/assets/images/icons/bedrooms.png') }}" class="img-fluid" alt="">
@@ -41,6 +42,20 @@
                                 <p class="text-center">{{ $proyecto->metros_cuadrados }} ㎡<br><small>Construcción</small></p>
                             </div>
                         @endif
+=======
+                        <div class="col-6 col-sm-4">
+                            <img src="{{ asset('/assets/images/icons/bedrooms.png') }}" class="img-fluid" alt="">
+                            <p class="text-center">{{ $proyecto->habitaciones }}<br><small>Habitaciones</small></p>
+                        </div>
+                        <div class="col-6 col-sm-4">
+                            <img src="{{ asset('assets/images/icons/bathrooms.png') }}" class="img-fluid" alt="">
+                            <p class="text-center">{{ $proyecto->banos }}<br><small>Baños</small></p>
+                        </div>
+                        <div class="col-6 col-sm-4">
+                            <img src="{{ asset('assets/images/icons/constructed.png') }}" class="img-fluid" alt="">
+                            <p class="text-center">{{ $proyecto->metros_cuadrados }} ㎡<br><small>Construcción</small></p>
+                        </div>
+>>>>>>> 7b60d294ce4dc8c02f98eca0e321f189c4064364
                         <!--
                         <div class="col-6 col-sm-3">
                             <img src="{{ asset('assets/images/icons/plot-size.png') }}" class="img-fluid" alt="">
@@ -48,17 +63,25 @@
                         </div>
                         -->
                         @if ($proyecto->piscina === 1)
-                            <div class="col-6 col-sm-6">
+                            <div class="col-6 col-sm-4">
                                 <img src="{{ asset('assets/images/icons/swimming.png') }}" class="img-fluid" alt="">
                                 <p class="text-center"><small>Piscina</small></p>
                             </div>
                         @endif
+<<<<<<< HEAD
                         @if ($proyecto->terraza === 1)
                             <div class="col-6 col-sm-6">
                                 <img src="{{ asset('assets/images/icons/terraces.png') }}" class="img-fluid" alt="">
                                 <p class="text-center"><small>Terraza</small></p>
                             </div>
                         @endif
+=======
+                        <div class="col-6 col-sm-4">
+                            <img src="{{ asset('assets/images/icons/terraces.png') }}" class="img-fluid" alt="">
+                            <p class="text-center"><small>Terraza</small></p>
+                        </div>
+                        <!--
+>>>>>>> 7b60d294ce4dc8c02f98eca0e321f189c4064364
                         @if ($proyecto->jacuzzi === 1)
                             <div class="col-6 col-sm-3">
                                 <img src="{{ asset('assets/images/icons/jacuzzi.png') }}" class="img-fluid" alt="">
