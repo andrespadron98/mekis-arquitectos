@@ -20,6 +20,12 @@
                         </a>
                     </li>
                 @endforeach
+                
+                <li class="nav-item position-relative">
+                    <a style="cursor:pointer;" href="{{ route('construcciones') }}" class="nav-link">
+                        Construcciones
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="col-12 col-sm-8 col-xl-9">

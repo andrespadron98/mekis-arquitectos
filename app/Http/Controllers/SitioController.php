@@ -15,7 +15,13 @@ class SitioController extends Controller
     
     public function index()
     {
-        $proyectos = Proyectos::get();
+        $proyectos = Proyectos::select('proyectos.*')
+                            ->join('proyectos_categorias', 'proyectos_categorias.id_proyecto', '=', 'proyectos.id')
+                            ->groupBy('proyectos.id', 'proyectos_categorias.id_categoria')
+                            ->inRandomOrder()
+                            ->limit(12)
+                            ->get();
+
         $valores = Configuraciones::pluck('valor','id')->toArray();
         return view('sitio.index')
             ->with('proyectos', $proyectos)
@@ -26,10 +32,14 @@ class SitioController extends Controller
     {
         $valores = Configuraciones::pluck('valor','id')->toArray();
         $valores['titulo'] = "PROYECTOS";
-        $valores['img'][0] = "header-projects.png";
-        $valores['img'][1] = "header-construcciones.png";
+        $valores['img'][0] = "c.jpeg";
         $categorias = Categorias::get();
-        $proyectos = Proyectos::get()->toArray();
+        $proyectos = Proyectos::select('proyectos.*')
+                                ->join('proyectos_categorias', 'proyectos_categorias.id_proyecto', '=', 'proyectos.id')
+                                ->groupBy('proyectos.id', 'proyectos_categorias.id_categoria')
+                                ->orderBy('proyectos_categorias.id_categoria', 'ASC')
+                                ->get()
+                                ->toArray();
         $i = 0;
         foreach($proyectos as $row){
             $proyectos[$i]['categorias'] = ProyectosCategorias::where('id_proyecto', $row['id'])->get()->toArray();
@@ -51,9 +61,7 @@ class SitioController extends Controller
         $imagenes = ProyectosImagenes::where('id_proyecto', $idProyecto)->get();
 
         $valores['titulo'] = "PROYECTOS";
-        // $valores['img'] = "header-projects.png";
-        $valores['img'][0] = "header-projects.png";
-        $valores['img'][1] = "header-construcciones.png";
+        $valores['img'][0] = "c.jpeg";
 
         if (empty($proyecto)) {
             return redirect(route('proyectos'));
@@ -69,9 +77,7 @@ class SitioController extends Controller
     {
         $valores = Configuraciones::pluck('valor','id')->toArray();
         $valores['titulo'] = "CONSTRUCCIONES";
-        // $valores['img'] = "header-construcciones.png";
-        $valores['img'][0] = "header-projects.png";
-        $valores['img'][1] = "header-construcciones.png";
+        $valores['img'][0] = "3construccione.jpg";
         return view('sitio.construcciones')
             ->with('valores', $valores);
     }    
@@ -80,9 +86,7 @@ class SitioController extends Controller
     {
         $valores = Configuraciones::pluck('valor','id')->toArray();
         $valores['titulo'] = "NOSOTROS";
-        // $valores['img'] = "header-we.png";
-        $valores['img'][0] = "header-we.png";
-        $valores['img'][1] = "header-construcciones.png";
+        $valores['img'][0] = "4nosotros.jpg";
         return view('sitio.nosotros')
             ->with('valores', $valores);
     }   
@@ -91,9 +95,7 @@ class SitioController extends Controller
     {
         $valores = Configuraciones::pluck('valor','id')->toArray();
         $valores['titulo'] = "INSPIRACIÓN";
-        // $valores['img'] = "header-inspiration.png";
-        $valores['img'][0] = "header-inspiration.png";
-        $valores['img'][1] = "header-construcciones.png";
+        $valores['img'][0] = "1inspiracion.jpg";
         return view('sitio.inspiracion')
             ->with('valores', $valores);
     }    
@@ -102,9 +104,7 @@ class SitioController extends Controller
     {
         $valores = Configuraciones::pluck('valor','id')->toArray();
         $valores['titulo'] = "PRENSA";
-        // $valores['img'] = "header-projects.png";
-        $valores['img'][0] = "header-projects.png";
-        $valores['img'][1] = "header-construcciones.png";
+        $valores['img'][0] = "5prensa.jpg";
         return view('sitio.prensa')
             ->with('valores', $valores);
     }    

@@ -492,7 +492,7 @@
     .set-bg {
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: top center;
+        background-position: center center;
     }
     
     .filter {
@@ -900,7 +900,7 @@
     .project-icon {
         padding: 0 8rem;
     }
-
+    
     #mobile.header {
         display: none;
     }
@@ -1054,7 +1054,8 @@
         #mobile.header {
             display: block;
         }
-        .paragraph, .project-icon {
+        .paragraph,
+        .project-icon {
             padding: 0 0!important;
         }
         .paragraph .row.w-75 {

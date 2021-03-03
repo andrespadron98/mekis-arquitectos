@@ -22,7 +22,6 @@
         <div class="collapse-header header-pages is-visible">
             <div class="owl-header owl-carousel">
                 <div class="background-header item set-bg filter" data-setbg="{{ asset('assets/images/'.$valores['img'][0]) }}"></div>
-                <div class="background-header item set-bg filter" data-setbg="{{ asset('assets/images/'.$valores['img'][1]) }}"></div>
             </div>
         </div>
         
