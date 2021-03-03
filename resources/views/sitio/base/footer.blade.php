@@ -4,7 +4,7 @@
         <div class="row">
             <div class="p-sm-2 p-lg-5 col-sm-12 col-lg-6">
                 <h2>Hablemos de tu <br> proyecto</h2>
-                <a href="mailto:{{ $valores[5] }}">Escríbenos</a>
+                <a href="{{ route('contacto') }}">Escríbenos</a>
             </div>
             <div class="p-sm-2 p-lg-5 col-12 col-sm-6 col-md-6 col-lg-6">
                 <h2>Contacto y <br> ubicación</h2>

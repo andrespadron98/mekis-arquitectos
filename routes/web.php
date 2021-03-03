@@ -20,6 +20,7 @@ Route::get('/construcciones', [App\Http\Controllers\SitioController::class, 'con
 Route::get('/nosotros', [App\Http\Controllers\SitioController::class, 'nosotros'])->name('nosotros');
 Route::get('/inspiracion', [App\Http\Controllers\SitioController::class, 'inspiracion'])->name('inspiracion');
 Route::get('/prensa', [App\Http\Controllers\SitioController::class, 'prensa'])->name('prensa');
+Route::get('/contacto', [App\Http\Controllers\SitioController::class, 'contacto'])->name('contacto');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -40,3 +41,5 @@ Route::resource('categorias', App\Http\Controllers\CategoriasController::class);
 Route::resource('proyectosPortal', App\Http\Controllers\ProyectosController::class);
 
 Route::resource('tiposProyectos', App\Http\Controllers\TiposProyectosController::class);
+
+Route::resource('contactos', App\Http\Controllers\ContactosController::class);

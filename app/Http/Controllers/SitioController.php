@@ -109,6 +109,15 @@ class SitioController extends Controller
             ->with('valores', $valores);
     }    
 
+    public function contacto()
+    {
+        $valores = Configuraciones::pluck('valor','id')->toArray();
+        $valores['titulo'] = "CONTACTO";
+        $valores['img'][0] = "5prensa.jpg";
+        return view('sitio.contacto')
+            ->with('valores', $valores);
+    }    
+
 
 
 }

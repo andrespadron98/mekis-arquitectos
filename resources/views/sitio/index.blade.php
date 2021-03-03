@@ -23,7 +23,7 @@
 <div class="wrd-block">
     <div class="container container-lg">
         <div class="row align-items-center justify-content-center pb-4">
-            <div class="col-6 text-left"><h2>Proyectos</h></div>
+            <div class="col-6 text-left"><h2>Proyectos</h2></div>
             <div class="col-6 mt-4 mt-sm-0 text-right link"><a href="{{ route('proyecto') }}">TODOS LOS PROYECTOS <img src="assets/images/select.png" class="img-fluid select-paragraph" alt=""></a></div>
         </div>
         <div class="row gallery-index">
