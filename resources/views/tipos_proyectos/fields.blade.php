@@ -1,11 +1,11 @@
 <!-- Nombre Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('nombre', 'Nombre:') !!}
-    {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" value="{{ old('nombre', $tiposProyectos->nombre ?? '') }}" class="form-control">
 </div>
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+    <input type="submit" value="Save" class="btn btn-primary">
     <a href="{{ route('tiposProyectos.index') }}" class="btn btn-light">Cancel</a>
 </div>

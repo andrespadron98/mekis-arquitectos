@@ -21,9 +21,6 @@ class ProyectosImagenes extends Model
     use HasFactory;
 
     public $table = 'proyectos_imagenes';
-    
-
-    protected $dates = ['deleted_at'];
 
 
 

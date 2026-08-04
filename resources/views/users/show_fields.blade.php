@@ -1,30 +1,30 @@
 <!-- Name Field -->
 <div class="form-group">
-    {!! Form::label('name', 'Name:') !!}
+    <label for="name">Name:</label>
     <p>{{ $user->name }}</p>
 </div>
 
 <!-- Email Field -->
 <div class="form-group">
-    {!! Form::label('email', 'Email:') !!}
+    <label for="email">Email:</label>
     <p>{{ $user->email }}</p>
 </div>
 
 <!-- Password Field -->
 <div class="form-group">
-    {!! Form::label('password', 'Password:') !!}
+    <label for="password">Password:</label>
     <p>{{ $user->password }}</p>
 </div>
 
 <!-- Created At Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
+    <label for="created_at">Created At:</label>
     <p>{{ $user->created_at }}</p>
 </div>
 
 <!-- Updated At Field -->
 <div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
+    <label for="updated_at">Updated At:</label>
     <p>{{ $user->updated_at }}</p>
 </div>
 

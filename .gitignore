@@ -4,13 +4,13 @@
 /vendor
 .env
 .env.backup
+.phpunit.cache
 .phpunit.result.cache
 docker-compose.override.yml
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/composer.lock
 /.idea
 public/mix-manifest.json
 package-lock.json

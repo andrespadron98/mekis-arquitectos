@@ -20,9 +20,6 @@ class TiposProyectos extends Model
     use HasFactory;
 
     public $table = 'tipos_proyectos';
-    
-
-    protected $dates = ['deleted_at'];
 
 
 

@@ -21,9 +21,6 @@ class ProyectosCategorias extends Model
     use HasFactory;
 
     public $table = 'proyectos_categorias';
-    
-
-    protected $dates = ['deleted_at'];
 
 
 

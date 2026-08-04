@@ -13,13 +13,15 @@
                        <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
                        <td class=" text-center">
-                           {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'delete']) !!}
+                           <form action="{{ route('users.destroy', [$user->id]) }}" method="POST">
+@csrf
+@method('DELETE')
                            <div class='btn-group'>
                                <a href="{!! route('users.show', [$user->id]) !!}" class='btn btn-light action-btn '><i class="fa fa-eye"></i></a>
                                <a href="{!! route('users.edit', [$user->id]) !!}" class='btn btn-warning action-btn edit-btn'><i class="fa fa-edit"></i></a>
-                               {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger action-btn delete-btn', 'onclick' => 'return confirm("Are you sure want to delete this record ?")']) !!}
+                               <button type="submit" class="btn btn-danger action-btn delete-btn" onclick="return confirm("Are you sure want to delete this record ?")"><i class="fa fa-trash"></i></button>
                            </div>
-                           {!! Form::close() !!}
+                           </form>
                        </td>
                    </tr>
         @endforeach

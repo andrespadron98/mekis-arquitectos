@@ -11,13 +11,15 @@
             <tr>
                        <td>{{ $tiposProyectos->nombre }}</td>
                        <td class=" text-center">
-                           {!! Form::open(['route' => ['tiposProyectos.destroy', $tiposProyectos->id], 'method' => 'delete']) !!}
+                           <form action="{{ route('tiposProyectos.destroy', [$tiposProyectos->id]) }}" method="POST">
+@csrf
+@method('DELETE')
                            <div class='btn-group'>
                                <a href="{!! route('tiposProyectos.show', [$tiposProyectos->id]) !!}" class='btn btn-light action-btn '><i class="fa fa-eye"></i></a>
                                <a href="{!! route('tiposProyectos.edit', [$tiposProyectos->id]) !!}" class='btn btn-warning action-btn edit-btn'><i class="fa fa-edit"></i></a>
-                               {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger action-btn delete-btn', 'onclick' => 'return confirm("Are you sure want to delete this record ?")']) !!}
+                               <button type="submit" class="btn btn-danger action-btn delete-btn" onclick="return confirm("Are you sure want to delete this record ?")"><i class="fa fa-trash"></i></button>
                            </div>
-                           {!! Form::close() !!}
+                           </form>
                        </td>
                    </tr>
         @endforeach

@@ -11,18 +11,20 @@
                 </div>
             </div>
   <div class="content">
-              @include('stisla-templates::common.errors')
+              @include('common.errors')
               <div class="section-body">
                  <div class="row">
                      <div class="col-lg-12">
                          <div class="card">
                              <div class="card-body ">
-                                    {!! Form::model($configuraciones, ['route' => ['configuraciones.update', $configuraciones->id], 'method' => 'patch']) !!}
+                                    <form action="{{ route('configuraciones.update', [$configuraciones->id]) }}" method="POST">
+@csrf
+@method('PATCH')
                                         <div class="row">
                                             @include('configuraciones.fields')
                                         </div>
 
-                                    {!! Form::close() !!}
+                                    </form>
                             </div>
                          </div>
                     </div>

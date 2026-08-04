@@ -21,9 +21,6 @@ class Configuraciones extends Model
     use HasFactory;
 
     public $table = 'configuraciones';
-    
-
-    protected $dates = ['deleted_at'];
 
 
 

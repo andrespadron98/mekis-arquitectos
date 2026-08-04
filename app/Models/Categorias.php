@@ -20,9 +20,6 @@ class Categorias extends Model
     use HasFactory;
 
     public $table = 'categorias';
-    
-
-    protected $dates = ['deleted_at'];
 
 
 

@@ -23,9 +23,6 @@ class Contactos extends Model
     use HasFactory;
 
     public $table = 'contactos';
-    
-
-    protected $dates = ['deleted_at'];
 
 
 

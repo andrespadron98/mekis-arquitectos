@@ -15,13 +15,15 @@
                 <td>{{ $proyectos->comuna }}</td>
                 <td>{{ $proyectos->ciudad }}</td>
                 <td class=" text-center">
-                    {!! Form::open(['route' => ['proyectosPortal.destroy', $proyectos->id], 'method' => 'delete']) !!}
+                    <form action="{{ route('proyectosPortal.destroy', [$proyectos->id]) }}" method="POST">
+@csrf
+@method('DELETE')
                     <div class='btn-group'>
                         <a href="{!! route('proyectos', [$proyectos->id]) !!}" class='btn btn-light action-btn '><i class="fa fa-eye"></i></a>
                         <a href="{!! route('proyectosPortal.edit', [$proyectos->id]) !!}" class='btn btn-warning action-btn edit-btn'><i class="fa fa-edit"></i></a>
-                        {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger action-btn delete-btn', 'onclick' => 'return confirm("Are you sure want to delete this record ?")']) !!}
+                        <button type="submit" class="btn btn-danger action-btn delete-btn" onclick="return confirm("Are you sure want to delete this record ?")"><i class="fa fa-trash"></i></button>
                     </div>
-                    {!! Form::close() !!}
+                    </form>
                 </td>
             </tr>
         @endforeach

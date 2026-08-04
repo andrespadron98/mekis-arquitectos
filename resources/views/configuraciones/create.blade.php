@@ -11,17 +11,18 @@
             </div>
         </div>
         <div class="content">
-            @include('stisla-templates::common.errors')
+            @include('common.errors')
             <div class="section-body">
                <div class="row">
                    <div class="col-lg-12">
                        <div class="card">
                            <div class="card-body ">
-                                {!! Form::open(['route' => 'configuraciones.store']) !!}
+                                <form action="{{ route('configuraciones.store') }}" method="POST">
+@csrf
                                     <div class="row">
                                         @include('configuraciones.fields')
                                     </div>
-                                {!! Form::close() !!}
+                                </form>
                            </div>
                        </div>
                    </div>
