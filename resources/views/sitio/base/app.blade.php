@@ -10,7 +10,13 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-        <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
+        {{-- Google pide /favicon.ico en la raiz y exige que sea cuadrado. La que
+             habia estaba vacia (0 bytes) y la otra media 221x152, por eso el
+             buscador mostraba el icono generico. --}}
+        <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon-16.png') }}">
+        <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
 
         {{-- El fondo del header es lo primero que se ve: se precarga con
              prioridad alta para que empiece a bajar junto con el HTML. --}}
