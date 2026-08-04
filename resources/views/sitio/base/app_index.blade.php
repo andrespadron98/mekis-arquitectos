@@ -10,6 +10,16 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
+
+        {{-- El fondo del header es lo primero que se ve: se precarga con
+             prioridad alta para que empiece a bajar junto con el HTML. --}}
+        <link rel="preload" as="image" fetchpriority="high" href="{{ asset('assets/images/a.jpeg') }}">
+        {{-- Los CSS y el jQuery vienen de tres dominios distintos; abrir la
+             conexion por adelantado ahorra el DNS y el TLS de cada uno. --}}
+        <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" crossorigin>
+        <link rel="preconnect" href="https://code.jquery.com" crossorigin>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
         <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/magnificpopup.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
@@ -27,7 +37,12 @@
         
         <div class="collapse-header header-index">
             <div class="owl-header owl-carousel">
-                <div class="background-header item set-bg filter" data-setbg="assets/images/a.jpeg"></div>
+                {{-- El primer slide se pinta aqui y no con set-bg: main.js va al
+                     final del documento, asi que pintarlo por JS obligaba a
+                     esperar jquery, popper, bootstrap y magnificpopup antes de
+                     siquiera pedir la imagen. Los otros cuatro pueden seguir por
+                     JS porque no se ven hasta que rota el carrusel. --}}
+                <div class="background-header item filter" style="background-image: url('{{ asset('assets/images/a.jpeg') }}')"></div>
                 <div class="background-header item set-bg filter" data-setbg="assets/images/b.jpeg"></div>
                 <div class="background-header item set-bg filter" data-setbg="assets/images/c.jpeg"></div>
                 <div class="background-header item set-bg filter" data-setbg="assets/images/d.jpeg"></div>

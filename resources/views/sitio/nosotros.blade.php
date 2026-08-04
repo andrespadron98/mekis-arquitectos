@@ -5,7 +5,7 @@
         <h1 class="text-left py-5">EQUIPO</h1>
         <div class="row">
             <div class="col-12 col-lg-4 px-3">
-                <img src="assets/images/nosotros/andres.jpeg" class="img-fluid" alt="">
+                <img loading="lazy" decoding="async" src="assets/images/nosotros/andres.jpeg" class="img-fluid" alt="">
                 <div class="pt-4">
                     <h2 class="mb-0">Andrés Mekis</h2>
                     <p><small>1988 - Arquitecto Universidad de Chile.</small></p>
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-4 px-3">
-                <img src="assets/images/nosotros/leon.jpg" class="img-fluid" alt="">
+                <img loading="lazy" decoding="async" src="assets/images/nosotros/leon.jpg" class="img-fluid" alt="">
                 <div class="pt-4">
                     <h2 class="mb-0">León Mekis</h2>
                     <p><small>2020 - Arquitecto UNAB.</small></p>
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-4 px-3">
-                <img src="assets/images/nosotros/pablo.jpg" class="img-fluid" alt="">
+                <img loading="lazy" decoding="async" src="assets/images/nosotros/pablo.jpg" class="img-fluid" alt="">
                 <div class="pt-4">
                     <h2 class="mb-0">Pablo Parra</h2>
                     <p><small>2014 - Arquitecto Universidad Politécnica de Valencia, España.</small></p>
@@ -38,7 +38,7 @@
     <div class="container container-lg">
         <div class="row">
             <div class="col-12 col-lg-4">
-                <img src="assets/images/nosotros/img-since.png" class="img-fluid" alt="">
+                <img loading="lazy" decoding="async" src="assets/images/nosotros/img-since.png" class="img-fluid" alt="">
             </div>
             <div class="col-12 col-lg-8 pt-4 pt-lg-0 pl-4">
                 <p class="font-weight-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, necessitatibus. Id modi molestiae quod quibusdam recusandae quasi, consequuntur iusto nulla consectetur architecto inventore. Temporibus quo voluptas enim, ratione ipsam hic!</p>

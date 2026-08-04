@@ -40,11 +40,94 @@ class ProyectosController extends AppBaseController
      */
     private function reglasImagenes($presencia)
     {
+        // 20 MB para ambas: las fotos llegan directo de camara (en el servidor
+        // habia una portada de 15 MB). El limite original de 2 MB en la portada
+        // habria rechazado el flujo normal del cliente. El peso se resuelve
+        // despues, en optimizarImagen(), no bloqueando la subida.
         return [
-            'img_previsualizacion' => $presencia . '|image|mimes:' . self::MIMES_IMAGEN . '|max:2048',
+            'img_previsualizacion' => $presencia . '|image|mimes:' . self::MIMES_IMAGEN . '|max:20480',
             'img_contenido'        => $presencia . '|array',
             'img_contenido.*'      => 'image|mimes:' . self::MIMES_IMAGEN . '|max:20480',
         ];
+    }
+
+    /** Lado maximo en pixeles de la imagen de portada del proyecto. */
+    private const LADO_PREVISUALIZACION = 1600;
+
+    /** Lado maximo de las fotos de la galeria, que se abren en lightbox. */
+    private const LADO_CONTENIDO = 2000;
+
+    /**
+     * Reduce y recomprime la imagen recien subida.
+     *
+     * Las fotos llegan directo de camara (se encontraron de 6000x4000 y 1.8 MB)
+     * y se servian tal cual para mostrarse en miniaturas de ~400 px. Eso era el
+     * grueso del peso del sitio. Si falta GD no hace nada: es preferible dejar
+     * la imagen pesada antes que romper la subida.
+     *
+     * @param string $ruta   ruta absoluta del archivo ya movido
+     * @param int    $maximo lado mayor permitido, en pixeles
+     *
+     * @return void
+     */
+    private function optimizarImagen($ruta, $maximo)
+    {
+        if (! function_exists('imagecreatefromjpeg') || ! is_readable($ruta)) {
+            return;
+        }
+
+        $info = @getimagesize($ruta);
+        if ($info === false) {
+            return;
+        }
+
+        [$ancho, $alto] = $info;
+        $escala = $maximo / max($ancho, $alto);
+
+        // Ya es chica y liviana: no se toca, recomprimir solo degradaria.
+        if ($escala >= 1 && filesize($ruta) < 400 * 1024) {
+            return;
+        }
+
+        switch ($info[2]) {
+            case IMAGETYPE_JPEG: $img = @imagecreatefromjpeg($ruta); break;
+            case IMAGETYPE_PNG:  $img = @imagecreatefrompng($ruta);  break;
+            case IMAGETYPE_WEBP: $img = @imagecreatefromwebp($ruta); break;
+            default: return;
+        }
+        if (! $img) {
+            return;
+        }
+
+        if ($escala < 1) {
+            $nuevoAncho = (int) round($ancho * $escala);
+            $nuevoAlto  = (int) round($alto * $escala);
+
+            // Sin cuarto argumento: IMG_BICUBIC no lo acepta imagescale en
+            // todos los builds de GD y devuelve false sin avisar.
+            $nueva = @imagescale($img, $nuevoAncho, $nuevoAlto);
+
+            if (! $nueva) {
+                // Respaldo por si imagescale falla igual.
+                $nueva = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+                imagecopyresampled($nueva, $img, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+            }
+
+            imagedestroy($img);
+            $img = $nueva;
+        }
+
+        if ($info[2] === IMAGETYPE_PNG) {
+            imagealphablending($img, false);
+            imagesavealpha($img, true);
+            @imagepng($img, $ruta, 8);
+        } elseif ($info[2] === IMAGETYPE_WEBP) {
+            @imagewebp($img, $ruta, 82);
+        } else {
+            @imagejpeg($img, $ruta, 82);
+        }
+
+        imagedestroy($img);
     }
 
     /**
@@ -112,6 +195,7 @@ class ProyectosController extends AppBaseController
             $file = $input['img_previsualizacion'];
             $filename = 'Previsualizacion-' . $proyectos->id . '.' . $this->extensionSegura($file);
             $file->move(public_path('previsualizaciones'), $filename);
+            $this->optimizarImagen(public_path('previsualizaciones/' . $filename), self::LADO_PREVISUALIZACION);
             $input['img_previsualizacion'] = $filename;
 
             $proyectoUp = Proyectos::find($proyectos->id);
@@ -125,6 +209,7 @@ class ProyectosController extends AppBaseController
                 $file = $input['img_contenido'][$row];
                 $filename = 'Contenido-' . $proyectos->id . '-' . $row . '.' . $this->extensionSegura($file);
                 $file->move(public_path('contenido'), $filename);
+                $this->optimizarImagen(public_path('contenido/' . $filename), self::LADO_CONTENIDO);
 
                 $imagen = new ProyectosImagenes();
                 $imagen->id_proyecto = $proyectos->id;
@@ -234,6 +319,7 @@ class ProyectosController extends AppBaseController
             $file = $input['img_previsualizacion'];
             $filename = 'Previsualizacion-' . $proyectos->id . '.' . $this->extensionSegura($file);
             $file->move(public_path('previsualizaciones'), $filename);
+            $this->optimizarImagen(public_path('previsualizaciones/' . $filename), self::LADO_PREVISUALIZACION);
             $input['img_previsualizacion'] = $filename;
         }else{
             $input['img_previsualizacion'] = $proyectos->img_previsualizacion;
@@ -246,6 +332,7 @@ class ProyectosController extends AppBaseController
                 $file = $input['img_contenido'][$row];
                 $filename = 'Contenido-' . $proyectos->id . '-' . $row . '.' . $this->extensionSegura($file);
                 $file->move(public_path('contenido'), $filename);
+                $this->optimizarImagen(public_path('contenido/' . $filename), self::LADO_CONTENIDO);
 
                 $imagen = new ProyectosImagenes();
                 $imagen->id_proyecto = $proyectos->id;

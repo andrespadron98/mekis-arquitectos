@@ -10,46 +10,46 @@
             <div class="row text-center  pb-5 mb-5">
                 <h2 class="py-4 text-center w-100">CHICUREO</h2>
                 <div class="position-relative w-100">
-                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/chicureo/1.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/chicureo/2.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/chicureo/3.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/chicureo/4.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/chicureo/5.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/chicureo/6.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/chicureo/7.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/chicureo/8.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/1.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/2.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/3.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/4.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/5.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/6.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/7.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/8.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
                     <div class="owl-page owl-carousel pt-1">
-                        <div class="item"><img src="assets/images/construcciones/chicureo/1.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(1)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/chicureo/2.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(2)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/chicureo/3.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(3)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/chicureo/4.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(4)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/chicureo/5.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(5)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/chicureo/6.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(6)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/chicureo/7.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(7)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/chicureo/8.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(8)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/1.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(1)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/2.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(2)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/3.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(3)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/4.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(4)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/5.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(5)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/6.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(6)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/7.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(7)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/chicureo/8.jpg" class="img-fluid cursor-pointer" onclick="currentSlide(8)" alt=""></div>
                     </div>
                 </div>
             </div>
             <div class="row text-center mt-5 pt-5">
                 <h2 class="py-4 text-center w-100">LA BARCA</h2>
                 <div class="position-relative w-100">
-                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/la-barca/1.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/la-barca/2.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/la-barca/3.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/la-barca/4.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/la-barca/5.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/la-barca/6.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/la-barca/7.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/la-barca/8.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/1.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/2.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/3.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/4.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/5.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/6.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/7.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide2 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/8.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
                     <div class="owl-page owl-carousel pt-1">
-                        <div class="item"><img src="assets/images/construcciones/la-barca/1.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(1)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/la-barca/2.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(2)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/la-barca/3.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(3)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/la-barca/4.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(4)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/la-barca/5.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(5)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/la-barca/6.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(6)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/la-barca/7.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(7)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/la-barca/8.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(8)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/1.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(1)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/2.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(2)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/3.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(3)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/4.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(4)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/5.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(5)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/6.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(6)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/7.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(7)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/la-barca/8.jpg" class="img-fluid cursor-pointer" onclick="currentSlide2(8)" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -57,23 +57,23 @@
             <div class="row text-center mt-5 pt-5">
                 <h2 class="py-4 text-center w-100">LAS HUALTATAS</h2>
                 <div class="position-relative w-100">
-                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/las-hualtatas/1.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/las-hualtatas/2.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/las-hualtatas/3.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/las-hualtatas/4.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/las-hualtatas/5.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/las-hualtatas/6.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/las-hualtatas/7.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
-                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img src="assets/images/construcciones/las-hualtatas/8.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/1.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/2.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/3.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/4.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/5.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/6.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/7.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
+                    <div class="sliderwide3 position-relative" style="height: 30rem;overflow: hidden;"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/8.jpg" class="img-fluid position-absolute" style="left: 0;"></div>
                     <div class="owl-page owl-carousel pt-1">
-                        <div class="item"><img src="assets/images/construcciones/las-hualtatas/1.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(1)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/las-hualtatas/2.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(2)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/las-hualtatas/3.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(3)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/las-hualtatas/4.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(4)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/las-hualtatas/5.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(5)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/las-hualtatas/6.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(6)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/las-hualtatas/7.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(7)" alt=""></div>
-                        <div class="item"><img src="assets/images/construcciones/las-hualtatas/8.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(8)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/1.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(1)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/2.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(2)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/3.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(3)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/4.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(4)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/5.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(5)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/6.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(6)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/7.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(7)" alt=""></div>
+                        <div class="item"><img loading="lazy" decoding="async" src="assets/images/construcciones/las-hualtatas/8.jpg" class="img-fluid cursor-pointer" onclick="currentSlide3(8)" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -161,7 +161,7 @@
                 nav:true,
                 center:false,
                 margin: 5,
-                navText: ['<img src="assets/images/arrow-l.png" width="32" alt="">', '<img src="assets/images/arrow-r.png" width="32" alt="">'],
+                navText: ['<img loading="lazy" decoding="async" src="assets/images/arrow-l.png" width="32" alt="">', '<img loading="lazy" decoding="async" src="assets/images/arrow-r.png" width="32" alt="">'],
                 responsive:{
                     0:{
                         items:3

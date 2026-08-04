@@ -25,49 +25,49 @@
                     <div class="row">
                         @if ($proyecto->habitaciones > 0)
                             <div class="col-6 col-sm-6">
-                                <img src="{{ asset('/assets/images/icons/bedrooms.png') }}" class="img-fluid" alt="">
+                                <img loading="lazy" decoding="async" src="{{ asset('/assets/images/icons/bedrooms.png') }}" class="img-fluid" alt="">
                                 <p class="text-center">{{ $proyecto->habitaciones }}<br><small>Habitaciones</small></p>
                             </div>
                         @endif
                         @if ($proyecto->banos > 0)
                             <div class="col-6 col-sm-6">
-                                <img src="{{ asset('assets/images/icons/bathrooms.png') }}" class="img-fluid" alt="">
+                                <img loading="lazy" decoding="async" src="{{ asset('assets/images/icons/bathrooms.png') }}" class="img-fluid" alt="">
                                 <p class="text-center">{{ $proyecto->banos }}<br><small>Baños</small></p>
                             </div>
                         @endif
                         @if ($proyecto->metros_cuadrados > 0)
                             <div class="col-6 col-sm-6">
-                                <img src="{{ asset('assets/images/icons/constructed.png') }}" class="img-fluid" alt="">
+                                <img loading="lazy" decoding="async" src="{{ asset('assets/images/icons/constructed.png') }}" class="img-fluid" alt="">
                                 <p class="text-center">{{ $proyecto->metros_cuadrados }} ㎡<br><small>Construcción</small></p>
                             </div>
                         @endif
                         <!--
                         <div class="col-6 col-sm-3">
-                            <img src="{{ asset('assets/images/icons/plot-size.png') }}" class="img-fluid" alt="">
+                            <img loading="lazy" decoding="async" src="{{ asset('assets/images/icons/plot-size.png') }}" class="img-fluid" alt="">
                             <p class="text-center">{{ $proyecto->metros_cuadrados_terreno }} ㎡<br><small>Terreno</small></p>
                         </div>
                         -->
                         @if ($proyecto->piscina === 1)
                             <div class="col-6 col-sm-6">
-                                <img src="{{ asset('assets/images/icons/swimming.png') }}" class="img-fluid" alt="">
+                                <img loading="lazy" decoding="async" src="{{ asset('assets/images/icons/swimming.png') }}" class="img-fluid" alt="">
                                 <p class="text-center"><small>Piscina</small></p>
                             </div>
                         @endif
                         @if ($proyecto->terraza === 1)
                             <div class="col-6 col-sm-6">
-                                <img src="{{ asset('assets/images/icons/terraces.png') }}" class="img-fluid" alt="">
+                                <img loading="lazy" decoding="async" src="{{ asset('assets/images/icons/terraces.png') }}" class="img-fluid" alt="">
                                 <p class="text-center"><small>Terraza</small></p>
                             </div>
                         @endif
                         {{-- @if ($proyecto->jacuzzi === 1)
                             <div class="col-6 col-sm-3">
-                                <img src="{{ asset('assets/images/icons/jacuzzi.png') }}" class="img-fluid" alt="">
+                                <img loading="lazy" decoding="async" src="{{ asset('assets/images/icons/jacuzzi.png') }}" class="img-fluid" alt="">
                                 <p class="text-center"><small>Jacuzzi</small></p>
                             </div>
                         @endif --}}
                         @if ($proyecto->estacionamientos === 1)
                             <div class="col-6 col-sm-4">
-                                <img src="{{ asset('assets/images/icons/parking.png') }}" class="img-fluid" alt="">
+                                <img loading="lazy" decoding="async" src="{{ asset('assets/images/icons/parking.png') }}" class="img-fluid" alt="">
                                 <p class="text-center"><small>Estacionamientos</small></p>
                             </div>
                         @endif
@@ -80,7 +80,7 @@
                 @foreach ($imagenes as $row)
                     <div class="item">
                         <a href="{{ asset('contenido/'.$row->imagen) }}">
-                            <img src="{{ asset('contenido/'.$row->imagen) }}" alt="" />
+                            <img loading="lazy" decoding="async" src="{{ asset('contenido/'.$row->imagen) }}" alt="" />
                             <div class="img-title">{{ $proyecto->nombre }}</div>
                         </a>
                     </div>
@@ -113,7 +113,7 @@
                 center:false,
                 margin: 10,
                 loop:true,
-                navText: ['<img src="{{ asset("assets/images/arrow-l.png") }}" width="32" alt="">', '<img src="{{ asset("assets/images/arrow-r.png") }}" width="32" alt="">'],
+                navText: ['<img loading="lazy" decoding="async" src="{{ asset("assets/images/arrow-l.png") }}" width="32" alt="">', '<img loading="lazy" decoding="async" src="{{ asset("assets/images/arrow-r.png") }}" width="32" alt="">'],
                 responsive:{
                     0:{
                         items:1

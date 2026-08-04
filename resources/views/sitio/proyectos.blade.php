@@ -8,14 +8,14 @@
             <ul class="flex-column nav pl-4">
                 <li class="nav-item position-relative">
                     <a style="cursor:pointer;" onclick="FiltroCategorias(null);" class="nav-link"> 
-                        <img id="select_todos" src="assets/images/select.png" class="img-fluid select" alt="">
+                        <img loading="lazy" decoding="async" id="select_todos" src="assets/images/select.png" class="img-fluid select" alt="">
                         Todos
                     </a>
                 </li>
                 @foreach ($categorias as $row)
                     <li class="nav-item position-relative">
                         <a style="cursor:pointer;" onclick="FiltroCategorias({{ $row->id }});" class="nav-link">
-                            <img id="select_{{ $row->id }}" src="assets/images/select.png" class="img-fluid select d-none" alt="">
+                            <img loading="lazy" decoding="async" id="select_{{ $row->id }}" src="assets/images/select.png" class="img-fluid select d-none" alt="">
                             {{ $row->nombre }}
                         </a>
                     </li>
@@ -34,7 +34,7 @@
                     <div class="col-12 col-sm-4 col-lg-4 @foreach($row['categorias'] as $c) categoria_{{ $c['id_categoria'] }} @endforeach">
                         <div class="item item-gallery">
                             <a href="{{ route('proyectos', $row['id']."#desc") }}">
-                                <img src="{{ asset("previsualizaciones/".$row['img_previsualizacion']) }}" alt="" />
+                                <img loading="lazy" decoding="async" src="{{ asset("previsualizaciones/".$row['img_previsualizacion']) }}" alt="" />
                                 <div class="img-title">{{ $row['nombre'] }}</div>
                             </a>
                         </div>

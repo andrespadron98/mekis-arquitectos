@@ -19,3 +19,45 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+# --- Cache del navegador -----------------------------------------------------
+# El sitio no enviaba ningun Cache-Control: cada visita repetida revalidaba los
+# ~40 recursos de la pagina uno por uno. Las imagenes y assets de este sitio
+# cambian muy poco, asi que se cachean largo.
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg                "access plus 1 year"
+    ExpiresByType image/png                 "access plus 1 year"
+    ExpiresByType image/gif                 "access plus 1 year"
+    ExpiresByType image/webp                "access plus 1 year"
+    ExpiresByType image/svg+xml             "access plus 1 year"
+    ExpiresByType image/x-icon              "access plus 1 year"
+    ExpiresByType font/woff2                "access plus 1 year"
+    ExpiresByType font/woff                 "access plus 1 year"
+    ExpiresByType application/font-woff     "access plus 1 year"
+    # CSS y JS mas corto: no llevan hash en el nombre, asi que un cache muy
+    # largo dejaria a los visitantes con version vieja tras un despliegue.
+    ExpiresByType text/css                  "access plus 7 days"
+    ExpiresByType application/javascript    "access plus 7 days"
+    ExpiresByType text/javascript           "access plus 7 days"
+    # El HTML nunca se cachea: es contenido dinamico.
+    ExpiresByType text/html                 "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico|woff2?)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+</IfModule>
+
+# --- Compresion --------------------------------------------------------------
+# gzip ya venia activo para css/js; se agregan los tipos que faltaban.
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+    AddOutputFilterByType DEFLATE application/javascript text/javascript
+    AddOutputFilterByType DEFLATE application/json application/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>

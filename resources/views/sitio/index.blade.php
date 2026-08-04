@@ -10,7 +10,7 @@
             
             <div class="row align-items-center justify-content-center w-75">
                 <div class="col-auto">
-                    {{-- <img src="assets/images/select.png" class="img-fluid select-paragraph" alt=""> --}}
+                    {{-- <img loading="lazy" decoding="async" src="assets/images/select.png" class="img-fluid select-paragraph" alt=""> --}}
                     {{-- <a href="#"><u>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, adipisci neque aspernatur magnam.</u></a>   --}}
                     <p class="mt-4">Desde el año 1993 hemos desarrollado Viviendas, Remodelaciones, Restaurantes y Oficinas, desarrollado proyectos de arquitectura contemporánea y clásica incluyendo la calidez que caracteriza nuestras propuestas, fiel en mantener el principio de proyectar una obra para que otros puedan ser felices en ella.</p> 
                     <p>La respuesta arquitectónica es fruto de las variables que el mundo requiere, es por esto que en nuestros encargos estamos comprometidos en dar respuesta a los requerimientos en cada uno de ellos, siempre manteniendo conciencia en los costos y la armonía en nuestros proyectos desde su concepción.</p>
@@ -24,14 +24,14 @@
     <div class="container container-lg">
         <div class="row align-items-center justify-content-center pb-4">
             <div class="col-6 text-left"><h2>Proyectos</h2></div>
-            <div class="col-6 mt-4 mt-sm-0 text-right link"><a href="{{ route('proyecto') }}">TODOS LOS PROYECTOS <img src="assets/images/select.png" class="img-fluid select-paragraph" alt=""></a></div>
+            <div class="col-6 mt-4 mt-sm-0 text-right link"><a href="{{ route('proyecto') }}">TODOS LOS PROYECTOS <img loading="lazy" decoding="async" src="assets/images/select.png" class="img-fluid select-paragraph" alt=""></a></div>
         </div>
         <div class="row gallery-index">
             @foreach ($proyectos as $row)
                 <div class="col-12 col-md-4">
                     <div class="item">
                         <a href="{{ route('proyectos', $row->id) }}">
-                            <img src="{{ asset("previsualizaciones/".$row->img_previsualizacion) }}" alt="" />
+                            <img loading="lazy" decoding="async" src="{{ asset("previsualizaciones/".$row->img_previsualizacion) }}" alt="" />
                             <div class="img-title">{{ $row->nombre }}</div>
                         </a>
                     </div>
