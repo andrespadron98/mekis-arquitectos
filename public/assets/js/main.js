@@ -16,9 +16,24 @@
     /*------------------
     	Background Set
     --------------------*/
-    $('.set-bg').each(function() {
-        var bg = $(this).data('setbg');
-        $(this).css('background-image', 'url(' + bg + ')');
+    function pintarFondos(selector) {
+        $(selector).each(function() {
+            var bg = $(this).data('setbg');
+            if (bg) {
+                $(this).css('background-image', 'url(' + bg + ')');
+            }
+        });
+    }
+
+    // Los fondos de contenido se pintan de inmediato.
+    pintarFondos('.set-bg:not(.background-header)');
+
+    // Los slides del carrusel del header no se ven al entrar: el primero ya
+    // viene pintado desde el HTML y el resto recien aparece cuando el carrusel
+    // rota, a los ~5 segundos. Cargarlos despues del load evita competir por
+    // ancho de banda con lo que si se ve (son ~1.8 MB en la home).
+    $(window).on('load', function() {
+        pintarFondos('.background-header.set-bg');
     });
 
     /*------------------

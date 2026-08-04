@@ -51,8 +51,8 @@ class ProyectosController extends AppBaseController
         ];
     }
 
-    /** Lado maximo en pixeles de la imagen de portada del proyecto. */
-    private const LADO_PREVISUALIZACION = 1600;
+    /** Lado maximo de la portada: se muestra como miniatura de ~180-400 px. */
+    private const LADO_PREVISUALIZACION = 1000;
 
     /** Lado maximo de las fotos de la galeria, que se abren en lightbox. */
     private const LADO_CONTENIDO = 2000;
