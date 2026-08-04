@@ -14,3 +14,6 @@ yarn-error.log
 /.idea
 public/mix-manifest.json
 package-lock.json
+
+# Documentos para el cliente: no van al repositorio, que es publico
+/entregables
