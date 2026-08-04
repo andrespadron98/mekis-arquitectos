@@ -1,5 +1,5 @@
 @extends('sitio.base.app_index')
-@section('h1', 'A&L Mekis Arquitectos, arquitectura y construccion en Chile')
+@section('h1', 'A&L Mekis Arquitectos, arquitectura y construcción en Chile')
 @section('contenido')
 <div class="wrd-block set-bg index-sec" data-setbg="assets/images/bg-melkis.jpg">
     <div class="container container-lg">

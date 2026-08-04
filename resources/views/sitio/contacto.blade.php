@@ -1,7 +1,7 @@
 @extends('sitio.base.app')
 @section('h1', 'Contacto con A&L Mekis Arquitectos')
 @section('titulo', 'Contacto')
-@section('descripcion', 'Conversemos tu proyecto. Escribenos y te respondemos: A&L Mekis Arquitectos, Vitacura, Santiago de Chile.')
+@section('descripcion', 'Conversemos tu proyecto. Escríbenos y te respondemos: A&L Mekis Arquitectos, Vitacura, Santiago de Chile.')
 @section('contenido')
 <div class="wrd-block prensa-sec set-bg" data-setbg="assets/images/bg-melkis.jpg" style="background-size: contain;">
     <div class="container container-lg">

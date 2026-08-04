@@ -14,19 +14,26 @@
 @php
     $marca = 'A&L Mekis Arquitectos';
 
-    $tituloPagina = trim($__env->yieldContent('titulo'));
+    // Blade escapa con e() el valor de un @section inline, asi que aqui llega
+    // ya codificado. Se decodifica para trabajar con texto plano y que cada
+    // salida (atributo HTML o JSON-LD) aplique su propio escapado una sola vez.
+    $seccion = fn ($nombre) => trim(html_entity_decode(
+        $__env->yieldContent($nombre), ENT_QUOTES, 'UTF-8'
+    ));
+
+    $tituloPagina = $seccion('titulo');
     $titulo = $tituloPagina !== ''
         ? $tituloPagina . ' | ' . $marca
-        : $marca . ' | Arquitectura y Construccion en Chile';
+        : $marca . ' | Arquitectura y Construcción en Chile';
 
-    $descripcion = trim($__env->yieldContent('descripcion'));
+    $descripcion = $seccion('descripcion');
     if ($descripcion === '') {
-        $descripcion = 'Estudio de arquitectura y construccion en Santiago de Chile. Viviendas, remodelaciones, restaurantes y oficinas desde 1993.';
+        $descripcion = 'Estudio de arquitectura y construcción en Santiago de Chile. Viviendas, remodelaciones, restaurantes y oficinas desde 1993.';
     }
 
     $correo   = $valores[5] ?? null;
     $telefono = $valores[6] ?? null;
-    $imagen   = $__env->yieldContent('imagenSocial') ?: asset('assets/images/a.jpeg');
+    $imagen   = $seccion('imagenSocial') ?: asset('assets/images/a.jpeg');
 
     $datos = array_filter([
         '@context'      => 'https://schema.org',
@@ -44,11 +51,11 @@
             '@type'           => 'PostalAddress',
             'streetAddress'   => 'El Coihue 3770',
             'addressLocality' => 'Vitacura',
-            'addressRegion'   => 'Region Metropolitana',
+            'addressRegion'   => 'Región Metropolitana',
             'addressCountry'  => 'CL',
         ],
         'areaServed'    => ['@type' => 'Country', 'name' => 'Chile'],
-        'knowsAbout'    => ['Arquitectura', 'Construccion', 'Remodelacion', 'Diseno de interiores'],
+        'knowsAbout'    => ['Arquitectura', 'Construcción', 'Remodelación', 'Diseño de interiores'],
         'sameAs'        => ['https://www.instagram.com/mekisarquitectos/'],
     ]);
 @endphp

@@ -1,7 +1,7 @@
 @extends('sitio.base.app')
 @section('h1', 'Construcciones de A&L Mekis Arquitectos')
 @section('titulo', 'Construcciones')
-@section('descripcion', 'Obras construidas por A&L Mekis Arquitectos. Del proyecto arquitectonico a la ejecucion, con un mismo equipo de principio a fin.')
+@section('descripcion', 'Obras construidas por A&L Mekis Arquitectos. Del proyecto arquitectónico a la ejecución, con un mismo equipo de principio a fin.')
 @section('contenido')
 <div class="wrd-block inspiration-sec set-bg" data-setbg="assets/images/bg-melkis.jpg" style="background-size: contain;">
     <div class="container container-lg">
