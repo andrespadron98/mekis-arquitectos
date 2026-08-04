@@ -1,0 +1,73 @@
+{{--
+    Metadatos del sitio publico.
+
+    Cada vista define su propio titulo y descripcion con:
+        @section('titulo', 'Proyectos')
+        @section('descripcion', 'Texto de hasta ~160 caracteres.')
+
+    Si no los define, cae en los valores de marca de abajo.
+
+    Contexto: hasta agosto de 2026 las ocho paginas compartian el mismo
+    <title>Andres Mekis</title>, sin descripcion ni datos estructurados. Por eso
+    los buscadores mostraban el sitio como "Andres Mekis" y no como el estudio.
+--}}
+@php
+    $marca = 'A&L Mekis Arquitectos';
+
+    $tituloPagina = trim($__env->yieldContent('titulo'));
+    $titulo = $tituloPagina !== ''
+        ? $tituloPagina . ' | ' . $marca
+        : $marca . ' | Arquitectura y Construccion en Chile';
+
+    $descripcion = trim($__env->yieldContent('descripcion'));
+    if ($descripcion === '') {
+        $descripcion = 'Estudio de arquitectura y construccion en Santiago de Chile. Viviendas, remodelaciones, restaurantes y oficinas desde 1993.';
+    }
+
+    $correo   = $valores[5] ?? null;
+    $telefono = $valores[6] ?? null;
+    $imagen   = $__env->yieldContent('imagenSocial') ?: asset('assets/images/a.jpeg');
+
+    $datos = array_filter([
+        '@context'      => 'https://schema.org',
+        '@type'         => 'ProfessionalService',
+        'name'          => $marca,
+        'alternateName' => 'Mekis Arquitectos',
+        'description'   => $descripcion,
+        'url'           => url('/'),
+        'logo'          => asset('assets/images/logotype.png'),
+        'image'         => $imagen,
+        'email'         => $correo,
+        'telephone'     => $telefono,
+        'foundingDate'  => '1993',
+        'address'       => [
+            '@type'           => 'PostalAddress',
+            'streetAddress'   => 'El Coihue 3770',
+            'addressLocality' => 'Vitacura',
+            'addressRegion'   => 'Region Metropolitana',
+            'addressCountry'  => 'CL',
+        ],
+        'areaServed'    => ['@type' => 'Country', 'name' => 'Chile'],
+        'knowsAbout'    => ['Arquitectura', 'Construccion', 'Remodelacion', 'Diseno de interiores'],
+        'sameAs'        => ['https://www.instagram.com/mekisarquitectos/'],
+    ]);
+@endphp
+<title>{{ $titulo }}</title>
+<meta name="description" content="{{ $descripcion }}">
+<meta name="robots" content="@yield('robots', 'index, follow, max-image-preview:large')">
+<link rel="canonical" href="{{ url()->current() }}">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ $marca }}">
+<meta property="og:locale" content="es_CL">
+<meta property="og:title" content="{{ $titulo }}">
+<meta property="og:description" content="{{ $descripcion }}">
+<meta property="og:url" content="{{ url()->current() }}">
+<meta property="og:image" content="{{ $imagen }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $titulo }}">
+<meta name="twitter:description" content="{{ $descripcion }}">
+<meta name="twitter:image" content="{{ $imagen }}">
+
+<script type="application/ld+json">{!! json_encode($datos, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>

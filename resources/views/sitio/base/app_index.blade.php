@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
-        <title>Andres Mekis</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        @include('sitio.base.seo')
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -53,6 +54,12 @@
         {{-- <div id="background-header" class="collapse-header header-index set-bg" data-setbg="assets/images/header-0.png"></div> --}}
         
         <main class="content-section collapse-content content-index">
+        {{-- El diseno no trae un titulo de primer nivel visible (los rotulos del
+             hero son h2 repetidos para movil y escritorio). Se emite uno accesible
+             para buscadores y lectores de pantalla, sin alterar la maqueta. --}}
+        @hasSection('h1')
+            <h1 class="sr-only">@yield('h1')</h1>
+        @endif
             @yield('contenido')
             @include('sitio.base.footer')
         </main>

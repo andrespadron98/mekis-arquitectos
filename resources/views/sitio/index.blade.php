@@ -1,4 +1,5 @@
 @extends('sitio.base.app_index')
+@section('h1', 'A&L Mekis Arquitectos, arquitectura y construccion en Chile')
 @section('contenido')
 <div class="wrd-block set-bg index-sec" data-setbg="assets/images/bg-melkis.jpg">
     <div class="container container-lg">
@@ -31,7 +32,7 @@
                 <div class="col-12 col-md-4">
                     <div class="item">
                         <a href="{{ route('proyectos', $row->id) }}">
-                            <img loading="lazy" decoding="async" src="{{ asset("previsualizaciones/".$row->img_previsualizacion) }}" alt="" />
+                            <img loading="lazy" decoding="async" src="{{ asset("previsualizaciones/".$row->img_previsualizacion) }}" alt="{{ $row->nombre }}" />
                             <div class="img-title">{{ $row->nombre }}</div>
                         </a>
                     </div>

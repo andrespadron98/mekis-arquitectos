@@ -3,12 +3,12 @@
         <div class="name">
             <div class="logo-site">
                 <a href="{{ route('index') }}">
-                    <img src="{{ asset('assets/images/logotype.png') }}" class="img" alt="">
+                    <img src="{{ asset('assets/images/logotype.png') }}" class="img" alt="A&amp;L Mekis Arquitectos">
                 </a>
             </div>
             <div class="name-site">
                 <a href="{{ route('index') }}">
-                    <p>ANDRÉS MEKIS<br><small>ARQUITECTOS</small></p>
+                    <p>A&amp;L MEKIS<br><small>ARQUITECTOS</small></p>
                 </a>
             </div>
         </div>
@@ -58,7 +58,7 @@
             <div class="pt-5">
                 <div class="name-site">
                     <a href="{{ route('index') }}">
-                        <p>ANDRÉS MEKIS<br><small>ARQUITECTOS</small></p>
+                        <p>A&amp;L MEKIS<br><small>ARQUITECTOS</small></p>
                     </a>
                 </div>
                 <h2>{{ $valores['titulo'] }}</h2>

@@ -1,11 +1,13 @@
 @extends('sitio.base.app')
+@section('titulo', 'Quienes somos')
+@section('descripcion', 'A&L Mekis Arquitectos es un estudio familiar de arquitectura y construccion en Chile, fundado en 1993 por Andres Mekis y continuado junto a Leon Mekis.')
 @section('contenido')
 <div class="wrd-block prensa-sec py-0 set-bg" data-setbg="assets/images/bg-melkis.jpg" style="background-size: contain;">
     <div class="container container-lg">
         <h1 class="text-left py-5">EQUIPO</h1>
         <div class="row">
             <div class="col-12 col-lg-4 px-3">
-                <img loading="lazy" decoding="async" src="assets/images/nosotros/andres.jpeg" class="img-fluid" alt="">
+                <img loading="lazy" decoding="async" src="assets/images/nosotros/andres.jpeg" class="img-fluid" alt="Andres Mekis, arquitecto">
                 <div class="pt-4">
                     <h2 class="mb-0">Andrés Mekis</h2>
                     <p><small>1988 - Arquitecto Universidad de Chile.</small></p>
@@ -14,7 +16,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-4 px-3">
-                <img loading="lazy" decoding="async" src="assets/images/nosotros/leon.jpg" class="img-fluid" alt="">
+                <img loading="lazy" decoding="async" src="assets/images/nosotros/leon.jpg" class="img-fluid" alt="Leon Mekis, arquitecto">
                 <div class="pt-4">
                     <h2 class="mb-0">León Mekis</h2>
                     <p><small>2020 - Arquitecto UNAB.</small></p>

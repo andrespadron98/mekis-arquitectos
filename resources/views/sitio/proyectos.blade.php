@@ -1,4 +1,7 @@
 @extends('sitio.base.app')
+@section('h1', 'Proyectos de arquitectura de A&L Mekis Arquitectos')
+@section('titulo', 'Proyectos de arquitectura')
+@section('descripcion', 'Viviendas, remodelaciones, restaurantes y oficinas proyectados por A&L Mekis Arquitectos en Santiago y el resto de Chile.')
 @section('contenido')
 <div class="wrd-block project-sec" data-setbg="assets/images/bg-melkis.jpg" style="background-size: contain;">
     <div class="container-lg">
@@ -34,7 +37,7 @@
                     <div class="col-12 col-sm-4 col-lg-4 @foreach($row['categorias'] as $c) categoria_{{ $c['id_categoria'] }} @endforeach">
                         <div class="item item-gallery">
                             <a href="{{ route('proyectos', $row['id']."#desc") }}">
-                                <img loading="lazy" decoding="async" src="{{ asset("previsualizaciones/".$row['img_previsualizacion']) }}" alt="" />
+                                <img loading="lazy" decoding="async" src="{{ asset("previsualizaciones/".$row['img_previsualizacion']) }}" alt="{{ $row['nombre'] }}" />
                                 <div class="img-title">{{ $row['nombre'] }}</div>
                             </a>
                         </div>

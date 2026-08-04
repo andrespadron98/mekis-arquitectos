@@ -1,4 +1,7 @@
 @extends('sitio.base.app')
+@section('h1', 'Inspiracion')
+@section('titulo', 'Inspiracion')
+@section('descripcion', 'Referencias y viajes que alimentan el trabajo de A&L Mekis Arquitectos: arquitectura, paisaje y oficio observados alrededor del mundo.')
 @section('contenido')
 <div class="wrd-block inspiration-sec set-bg" data-setbg="assets/images/bg-melkis.jpg" style="background-size: contain;">
     <div class="container container-lg">

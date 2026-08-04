@@ -1,4 +1,7 @@
 @extends('sitio.base.app')
+@section('titulo', 'Mensaje enviado')
+@section('descripcion', 'Recibimos tu mensaje. Pronto nos comunicamos contigo.')
+@section('robots', 'noindex, follow')
 @section('contenido')
 <div class="wrd-block prensa-sec set-bg" data-setbg="assets/images/bg-melkis.jpg" style="background-size: contain;">
     <div class="container container-lg">

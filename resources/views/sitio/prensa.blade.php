@@ -1,4 +1,7 @@
 @extends('sitio.base.app')
+@section('h1', 'Prensa y publicaciones')
+@section('titulo', 'Prensa y publicaciones')
+@section('descripcion', 'Publicaciones y apariciones en prensa de los proyectos de A&L Mekis Arquitectos.')
 @section('contenido')
 <div class="wrd-block prensa-sec set-bg" data-setbg="assets/images/bg-melkis.jpg" style="background-size: contain;">
     <div class="container container-lg">

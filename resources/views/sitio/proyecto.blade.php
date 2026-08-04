@@ -1,4 +1,16 @@
 @extends('sitio.base.app')
+@php
+    // Varios proyectos tienen la misma comuna y ciudad (por ejemplo Valparaiso),
+    // asi que se arma la ubicacion sin repetir.
+    $ubicacion = collect([$proyecto->comuna, $proyecto->ciudad])
+        ->filter()
+        ->map(fn ($p) => trim($p))
+        ->unique()
+        ->implode(', ');
+@endphp
+@section('titulo', $proyecto->nombre . ($ubicacion ? ', ' . $ubicacion : ''))
+@section('descripcion', Str::limit(trim($proyecto->nombre . ($ubicacion ? ' en ' . $ubicacion : '') . '. ' . strip_tags($proyecto->descripcion)), 155))
+@section('imagenSocial', asset('previsualizaciones/' . $proyecto->img_previsualizacion))
 @section('contenido')
 <div class="wrd-block project-sec" data-setbg="../assets/images/proyects/bg-proyectos.png" style="background-size: contain;">
     <div id="desc" class="container-lg">
@@ -80,7 +92,7 @@
                 @foreach ($imagenes as $row)
                     <div class="item">
                         <a href="{{ asset('contenido/'.$row->imagen) }}">
-                            <img loading="lazy" decoding="async" src="{{ asset('contenido/'.$row->imagen) }}" alt="" />
+                            <img loading="lazy" decoding="async" src="{{ asset('contenido/'.$row->imagen) }}" alt="{{ $proyecto->nombre }}" />
                             <div class="img-title">{{ $proyecto->nombre }}</div>
                         </a>
                     </div>
