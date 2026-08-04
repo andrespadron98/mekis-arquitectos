@@ -1159,3 +1159,21 @@
             background-position: top center!important;
         }
     }
+
+/* --------------------------------------------------------------------------
+   Simbolo nuevo (2026)
+
+   El simbolo nuevo es mas ancho que el anterior: 1,90:1 contra 1,45:1. A igual
+   ancho quedaba un 23% mas bajo y perdia presencia frente al texto del otro
+   extremo, asi que se compensa el ancho para conservar la altura visual que
+   tenia el logo original.
+   -------------------------------------------------------------------------- */
+#desktop.header .name .logo-site {
+    max-width: 12vw;
+}
+
+@media only screen and (min-width: 1200px) {
+    #desktop.header .name .logo-site {
+        max-width: min(9.5vw, 165px);
+    }
+}

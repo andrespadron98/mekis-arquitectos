@@ -3,7 +3,7 @@
         <div class="name">
             <div class="logo-site">
                 <a href="{{ route('index') }}">
-                    <img src="{{ asset('assets/images/logotype.png') }}" class="img" alt="A&amp;L Mekis Arquitectos">
+                    <img src="{{ asset('assets/images/simbolo-mekis-blanco.png') }}" class="img" alt="A&amp;L Mekis Arquitectos">
                 </a>
             </div>
             <div class="name-site">
@@ -59,7 +59,7 @@
             <div class="no-collapse-title is-visible">
                 <div class="logo-site">
                     <a href="{{ route('index') }}">
-                        <img src="assets/images/logotype.png" alt="A&amp;L Mekis Arquitectos">
+                        <img src="assets/images/simbolo-mekis-blanco.png" alt="A&amp;L Mekis Arquitectos">
                     </a>
                 </div>
                 <h2>ARQUITECTURA<br>&<br>CONSTRUCCION</h2>

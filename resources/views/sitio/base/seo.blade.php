@@ -42,7 +42,7 @@
         'alternateName' => 'Mekis Arquitectos',
         'description'   => $descripcion,
         'url'           => url('/'),
-        'logo'          => asset('assets/images/logotype.png'),
+        'logo'          => asset('assets/images/logo-mekis.png'),
         'image'         => $imagen,
         'email'         => $correo,
         'telephone'     => $telefono,

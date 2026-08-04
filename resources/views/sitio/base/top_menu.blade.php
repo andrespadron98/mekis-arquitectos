@@ -3,7 +3,7 @@
         <div class="name">
             <div class="logo-site">
                 <a href="{{ route('index') }}">
-                    <img src="{{ asset('assets/images/logotype.png') }}" class="img" alt="A&amp;L Mekis Arquitectos">
+                    <img src="{{ asset('assets/images/simbolo-mekis-blanco.png') }}" class="img" alt="A&amp;L Mekis Arquitectos">
                 </a>
             </div>
             <div class="name-site">
