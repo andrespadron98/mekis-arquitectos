@@ -17,12 +17,50 @@ use Response;
 
 class ProyectosController extends AppBaseController
 {
+    /**
+     * Extensiones de imagen aceptadas. No se admite svg: puede llevar
+     * JavaScript embebido y se sirve desde el mismo dominio.
+     */
+    private const MIMES_IMAGEN = 'jpeg,jpg,png,gif,webp';
+
     /** @var  ProyectosRepository */
     private $proyectosRepository;
 
     public function __construct(ProyectosRepository $proyectosRepo)
     {
         $this->proyectosRepository = $proyectosRepo;
+    }
+
+    /**
+     * Reglas de validacion de las imagenes del proyecto.
+     *
+     * @param string $presencia  'required' al crear, 'nullable' al editar
+     *
+     * @return array
+     */
+    private function reglasImagenes($presencia)
+    {
+        return [
+            'img_previsualizacion' => $presencia . '|image|mimes:' . self::MIMES_IMAGEN . '|max:2048',
+            'img_contenido'        => $presencia . '|array',
+            'img_contenido.*'      => 'image|mimes:' . self::MIMES_IMAGEN . '|max:20480',
+        ];
+    }
+
+    /**
+     * Extension deducida del contenido real del archivo, no del nombre que
+     * mando el cliente. Confiar en getClientOriginalExtension() permitia subir
+     * un .php disfrazado de imagen y ejecutarlo desde el navegador.
+     *
+     * @param \Illuminate\Http\UploadedFile $file
+     *
+     * @return string
+     */
+    private function extensionSegura($file)
+    {
+        $extension = strtolower((string) $file->extension());
+
+        return in_array($extension, explode(',', self::MIMES_IMAGEN)) ? $extension : 'jpg';
     }
 
     /**
@@ -66,16 +104,13 @@ class ProyectosController extends AppBaseController
     {
         $input = $request->all();
 
-        $request->validate([
-            'img_contenido' => 'required',
-            'img_previsualizacion' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
-        ]);
+        $request->validate($this->reglasImagenes('required'));
 
         $proyectos = $this->proyectosRepository->create($input);
-        
+
         if ($request->hasFile('img_previsualizacion')){
             $file = $input['img_previsualizacion'];
-            $filename = 'Previsualizacion-' . $proyectos->id . '.' . $file->getClientOriginalExtension();
+            $filename = 'Previsualizacion-' . $proyectos->id . '.' . $this->extensionSegura($file);
             $file->move(public_path('previsualizaciones'), $filename);
             $input['img_previsualizacion'] = $filename;
 
@@ -88,7 +123,7 @@ class ProyectosController extends AppBaseController
         if($request->hasfile('img_contenido')){
            foreach($request->file('img_contenido') as $row => $file){
                 $file = $input['img_contenido'][$row];
-                $filename = 'Contenido-' . $proyectos->id . '-' . $row . '.' . $file->getClientOriginalExtension();
+                $filename = 'Contenido-' . $proyectos->id . '-' . $row . '.' . $this->extensionSegura($file);
                 $file->move(public_path('contenido'), $filename);
 
                 $imagen = new ProyectosImagenes();
@@ -100,7 +135,7 @@ class ProyectosController extends AppBaseController
         }
 
         $categorias = count($input['categorias']);
-        for ($i=0; $i < $categorias; $i++) { 
+        for ($i=0; $i < $categorias; $i++) {
             $categoria = new ProyectosCategorias();
             $categoria->id_proyecto = $proyectos->id;
             $categoria->id_categoria = $input['categorias'][$i];
@@ -192,10 +227,12 @@ class ProyectosController extends AppBaseController
         }
 
         $input = $request->all();
-        
+
+        $request->validate($this->reglasImagenes('nullable'));
+
         if ($request->hasFile('img_previsualizacion')){
             $file = $input['img_previsualizacion'];
-            $filename = 'Previsualizacion-' . $proyectos->id . '.' . $file->getClientOriginalExtension();
+            $filename = 'Previsualizacion-' . $proyectos->id . '.' . $this->extensionSegura($file);
             $file->move(public_path('previsualizaciones'), $filename);
             $input['img_previsualizacion'] = $filename;
         }else{
@@ -207,7 +244,7 @@ class ProyectosController extends AppBaseController
             ProyectosImagenes::where('id_proyecto', $id)->delete();
             foreach($request->file('img_contenido') as $row => $file){
                 $file = $input['img_contenido'][$row];
-                $filename = 'Contenido-' . $proyectos->id . '-' . $row . '.' . $file->getClientOriginalExtension();
+                $filename = 'Contenido-' . $proyectos->id . '-' . $row . '.' . $this->extensionSegura($file);
                 $file->move(public_path('contenido'), $filename);
 
                 $imagen = new ProyectosImagenes();

@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateContactosRequest;
 use App\Http\Requests\UpdateContactosRequest;
 use App\Repositories\ContactosRepository;
+use App\Models\Configuraciones;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use Mail;
 
 class ContactosController extends AppBaseController
 {
@@ -58,9 +60,23 @@ class ContactosController extends AppBaseController
 
         $contactos = $this->contactosRepository->create($input);
 
+        $datos = array(
+            "nombre" => $input['nombre'],
+            "celular" => $input['celular'],
+            "correo" => $input['correo'],
+            "cuentanos" => $input['cuentanos']
+        );
+        $valores = Configuraciones::pluck('valor','id')->toArray();
+
+        Mail::send('contacto-mail', $datos, function ($m) use ($valores) {
+            $m->from('contacto@mekisarquitectos.cl','Mekis Arquitectos');
+            $m->to($valores[5]);
+            $m->subject('Contacto Web Mekis Arquitectos');
+        });
+
         Flash::success('Mensaje enviado exitosamente, pronto nos comunicaremos contigo.');
 
-        return redirect(route('contacto'));
+        return redirect(route('contactoExito'));
     }
 
     /**

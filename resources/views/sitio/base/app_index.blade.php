@@ -16,6 +16,11 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         
         @yield('cssPersonalizado')
+        
+        <!-- Global site tag (gtag.js) - Google Ads: 408466151 --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-408466151"></script> 
+        <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-408466151'); </script>
+
     </head>
     <body>
         @include('sitio.base.top_menu_index')

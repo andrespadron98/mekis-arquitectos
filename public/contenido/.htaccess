@@ -1,0 +1,18 @@
+# Este directorio solo contiene imagenes subidas desde el panel.
+# Nada de aqui debe ejecutarse nunca: por esta via se subio y se ejecuto un
+# webshell (.php / .phtml) en febrero de 2026.
+
+<IfModule mod_mime.c>
+    RemoveHandler .php .phtml .phar .php3 .php4 .php5 .php7 .php8 .phps .pht .cgi .pl .py .sh
+    RemoveType .php .phtml .phar .php3 .php4 .php5 .php7 .php8 .phps .pht
+</IfModule>
+
+<FilesMatch "(?i)\.(php|phtml|phar|php[0-9]*|phps|pht|cgi|pl|py|sh)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
