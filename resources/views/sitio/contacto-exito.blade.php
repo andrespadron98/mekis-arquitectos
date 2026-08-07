@@ -1,4 +1,5 @@
 @extends('sitio.base.app')
+@section('h1', 'Mensaje enviado')
 @section('titulo', 'Mensaje enviado')
 @section('descripcion', 'Recibimos tu mensaje. Pronto nos comunicamos contigo.')
 @section('robots', 'noindex, follow')

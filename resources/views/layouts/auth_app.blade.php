@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    {{-- Pantalla del panel: no tiene por que aparecer en buscadores. --}}
+    <meta name="robots" content="noindex, nofollow">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>@yield('title') | {{ config('app.name') }}</title>
 

@@ -8,7 +8,10 @@
         ->unique()
         ->implode(', ');
 @endphp
-@section('titulo', $proyecto->nombre . ($ubicacion ? ', ' . $ubicacion : ''))
+{{-- Solo la comuna en el titulo: con la ubicacion completa algunas fichas
+     pasaban los 74 caracteres y Google corta cerca de 60. La ubicacion
+     completa se conserva en la descripcion, donde hay mas espacio. --}}
+@section('titulo', $proyecto->nombre . (trim($proyecto->comuna) ? ', ' . trim($proyecto->comuna) : ''))
 @section('descripcion', Str::limit(trim($proyecto->nombre . ($ubicacion ? ' en ' . $ubicacion : '') . '. ' . strip_tags($proyecto->descripcion)), 155))
 @section('imagenSocial', asset('previsualizaciones/' . $proyecto->img_previsualizacion))
 @section('contenido')
