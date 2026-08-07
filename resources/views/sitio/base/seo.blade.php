@@ -64,6 +64,23 @@
         'knowsAbout'    => ['Arquitectura', 'Construcción', 'Remodelación', 'Diseño de interiores'],
         'sameAs'        => ['https://www.instagram.com/mekisarquitectos/'],
     ]);
+
+    // Este es el bloque que Google usa para decidir el nombre del sitio en los
+    // resultados: exige el tipo WebSite y solo lo lee en la portada. El
+    // ProfessionalService de arriba describe a la empresa, pero no alimenta ese
+    // nombre; sin esto Google lo deduce del historial, y el sitio dijo
+    // "Andres Mekis" durante cinco anos.
+    //
+    // Se arma aqui y no en el HTML a proposito: Blade interpreta @context como
+    // directiva propia, asi que un array escrito dentro de {!! !!} salia
+    // compilado como PHP en vez de JSON.
+    $datosWeb = request()->path() === '/' ? [
+        '@context'      => 'https://schema.org',
+        '@type'         => 'WebSite',
+        'name'          => $marca,
+        'alternateName' => ['Mekis Arquitectos', 'A&L Mekis'],
+        'url'           => rtrim(config('app.url'), '/'),
+    ] : null;
 @endphp
 <title>{{ $titulo }}</title>
 <meta name="description" content="{{ $descripcion }}">
@@ -85,19 +102,6 @@
 
 <script type="application/ld+json">{!! json_encode($datos, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
 
-@if (request()->path() === '/')
-    {{--
-        Este es el bloque que Google usa para decidir el nombre del sitio en los
-        resultados: exige el tipo WebSite y solo lo lee de la portada. El de
-        arriba (ProfessionalService) describe a la empresa, pero no alimenta ese
-        nombre. Sin esto, Google lo deduce del historial, y el sitio dijo
-        "Andres Mekis" durante cinco anos.
-    --}}
-    <script type="application/ld+json">{!! json_encode([
-        '@context'      => 'https://schema.org',
-        '@type'         => 'WebSite',
-        'name'          => $marca,
-        'alternateName' => ['Mekis Arquitectos', 'A&L Mekis'],
-        'url'           => rtrim(config('app.url'), '/'),
-    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+@if ($datosWeb)
+<script type="application/ld+json">{!! json_encode($datosWeb, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
 @endif
