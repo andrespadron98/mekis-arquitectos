@@ -78,3 +78,20 @@
 <meta name="twitter:image" content="{{ $imagen }}">
 
 <script type="application/ld+json">{!! json_encode($datos, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+
+@if (request()->path() === '/')
+    {{--
+        Este es el bloque que Google usa para decidir el nombre del sitio en los
+        resultados: exige el tipo WebSite y solo lo lee de la portada. El de
+        arriba (ProfessionalService) describe a la empresa, pero no alimenta ese
+        nombre. Sin esto, Google lo deduce del historial, y el sitio dijo
+        "Andres Mekis" durante cinco anos.
+    --}}
+    <script type="application/ld+json">{!! json_encode([
+        '@context'      => 'https://schema.org',
+        '@type'         => 'WebSite',
+        'name'          => $marca,
+        'alternateName' => ['Mekis Arquitectos', 'A&L Mekis'],
+        'url'           => url('/'),
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+@endif
