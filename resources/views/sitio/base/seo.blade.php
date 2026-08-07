@@ -35,13 +35,19 @@
     $telefono = $valores[6] ?? null;
     $imagen   = $seccion('imagenSocial') ?: asset('assets/images/a.jpeg');
 
+    // La URL canonica se arma sobre APP_URL y no sobre el host pedido: con
+    // url()->current() la version www se declaraba canonica de si misma, asi que
+    // ambas decian ser la original y Google repartia las senales entre las dos.
+    $ruta = trim(request()->path(), '/');
+    $canonica = rtrim(config('app.url'), '/') . ($ruta === '' ? '/' : '/' . $ruta);
+
     $datos = array_filter([
         '@context'      => 'https://schema.org',
         '@type'         => 'ProfessionalService',
         'name'          => $marca,
         'alternateName' => 'Mekis Arquitectos',
         'description'   => $descripcion,
-        'url'           => url('/'),
+        'url'           => rtrim(config('app.url'), '/'),
         'logo'          => asset('assets/images/logo-mekis.png'),
         'image'         => $imagen,
         'email'         => $correo,
@@ -62,14 +68,14 @@
 <title>{{ $titulo }}</title>
 <meta name="description" content="{{ $descripcion }}">
 <meta name="robots" content="@yield('robots', 'index, follow, max-image-preview:large')">
-<link rel="canonical" href="{{ url()->current() }}">
+<link rel="canonical" href="{{ $canonica }}">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ $marca }}">
 <meta property="og:locale" content="es_CL">
 <meta property="og:title" content="{{ $titulo }}">
 <meta property="og:description" content="{{ $descripcion }}">
-<meta property="og:url" content="{{ url()->current() }}">
+<meta property="og:url" content="{{ $canonica }}">
 <meta property="og:image" content="{{ $imagen }}">
 
 <meta name="twitter:card" content="summary_large_image">
@@ -92,6 +98,6 @@
         '@type'         => 'WebSite',
         'name'          => $marca,
         'alternateName' => ['Mekis Arquitectos', 'A&L Mekis'],
-        'url'           => url('/'),
+        'url'           => rtrim(config('app.url'), '/'),
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
 @endif
